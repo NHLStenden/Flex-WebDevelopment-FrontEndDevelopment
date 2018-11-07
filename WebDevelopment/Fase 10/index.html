@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mijn eerste JQuery Front-End met REST API gegevens</title>
+    <script src="jquery/jquery.min.js"></script>
+
+    <!--
+    Let op hoe de onderstaande js-files niet geladen worden met type 'javascript' maar met type 'module'.
+    het laden van het script "js/MyHttpClass.js" gebeurt door de module "js/index.js"
+    -->
+    <script src="js/index.js" type="module"></script>
+
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/cover.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+<body class="text-center">
+
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <div class="inner">
+            <h3 class="masthead-brand">Cover</h3>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main" class="inner cover">
+        <h1 class="cover-heading" id="person_name" ></h1>
+        <p class="lead" id="person_sexe"></p>
+        <p class="lead" id="person_beroep"></p>
+
+        <p class="lead" id="imdb_url">
+            <a href="http://www.molema.org/stamboom/id=1" class="btn btn-lg btn-secondary">Learn more</a>
+        </p>
+    </main>
+
+    <footer class="mastfoot mt-auto">
+        <div class="inner">
+            <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+#container p {
+    cursor:pointer;
+    width:200px;
+}
+
+#report p span {
+    font-weight: bold;
+    color:blue;
+}
+
+#container p:nth-child(even){
+    background-color:lightgray;
+}
+
+#container p:nth-child(odd){
+    background-color:lightblue;
+}
+.red {
+    color:red;
+}
+
+.blue {
+    color:blue;
+}
