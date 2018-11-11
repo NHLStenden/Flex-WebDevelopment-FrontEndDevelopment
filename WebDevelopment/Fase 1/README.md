@@ -1,4 +1,4 @@
-#Front End Website met basic Javascript - Fase 1
+# Front End Website met basic Javascript - Fase 1
 De meest eenvoudige Javascript output. We maken hier gebruik van het Javascript commando
 Document.write()
 
