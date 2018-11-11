@@ -5,10 +5,18 @@ $(document).ready()
 ```
 maar dan met de naam van een functie (initPage).
 
-om door een lijst met strings heen te lopen gebruiken we de JQuery [each](https://api.jquery.com/each/)
-functie.  In deze 'for-each' loop maken we nieuwe P-elementen en wijzen er een getal
-als text-element aan toe. 
+om door een lijst met strings heen te lopen gebruiken we de JQuery each-functie.  In deze 'for-each' loop maken we nieuwe P-elementen en wijzen er een getal
+als text-element aan toe.
+
+```javascript
+$.each(items, function(idx, item){
+    ....
+});
+``` 
 
 Aan het einde verzamelen we in één keer alle nieuwe P-elementen in de geselecteerde
 container, door een dubbele selector te gebruiken: de eerste is het gezochte element, de
 tweede is de scope (reikweidte, start) waarbinnen gezocht moet worden.
+
+## Referenties
+  * [each](https://api.jquery.com/each/)

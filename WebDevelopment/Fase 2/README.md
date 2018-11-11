@@ -15,8 +15,14 @@ HTML klaar is met laden ([Link naar MDN](https://developer.mozilla.org/en-US/doc
 
 Tevens gaan we aan de slag met het concept van de DOM : het "Document Object Model".
 
-Referenties:
+
+Daarna gaan we aan de slag met het maken van een stukje interactieve website: zelf een stukje 
+HTML aan de DOM toevoegen, zodat we er op kunnen klikken met de muis.
+
+
+## Referenties:
+  * [Document Object Model](https://nl.wikipedia.org/wiki/Document_Object_Model)
   * [GetElementByID](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
   * [CreateElement](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
   * [documentElement](https://developer.mozilla.org/en-US/docs/Web/API/Document/documentElement)
-  
+  * [eventHandler](https://developer.mozilla.org/en-US/docs/Web/API/EventListener)
