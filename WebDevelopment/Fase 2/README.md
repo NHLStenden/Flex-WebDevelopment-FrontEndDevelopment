@@ -15,9 +15,19 @@ HTML klaar is met laden ([Link naar MDN](https://developer.mozilla.org/en-US/doc
 
 Tevens gaan we aan de slag met het concept van de DOM : het "Document Object Model".
 
-
+## DOM
 Daarna gaan we aan de slag met het maken van een stukje interactieve website: zelf een stukje 
-HTML aan de DOM toevoegen, zodat we er op kunnen klikken met de muis.
+HTML aan de *DOM* toevoegen, zodat we er op kunnen klikken met de muis.
+
+DOM: Document Object Model
+Als de browser HTML heeft opgehaald gaat hij een boomstructuur bouwen, waarin alle elementen en object in opgeslagen worden.
+We noemen dit de DOM: *het Document Object Model*. In onderstaande afbeelding zie je een voobeeld van zo'n boom.
+![DOM](doc/FrontEndDevelopment-DOM.png)
+
+In de tweede afbeelding hier onder zijn de elementen uitgebreid door er een klasse ('class') of een HTML *id* aan toe te voegen.
+Een klasse wordt weergegeven door de naam van het element (P, SPAN, DIV) aan te vullen met een punt ('.') gevolgd door
+de klasse naam / namen. Als een element een ID heeft, wordt deze typisch weergegeven met een hash ('#').
+![DOM](doc/FrontEndDevelopment-DOM 2.png)
 
 
 ## Referenties:
