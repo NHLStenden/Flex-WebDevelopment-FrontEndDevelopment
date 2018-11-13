@@ -28,7 +28,7 @@ In de tweede afbeelding hier onder zijn de elementen uitgebreid door er een klas
 Een klasse wordt weergegeven door de naam van het element (P, SPAN, DIV) aan te vullen met een punt ('.') gevolgd door
 de klasse naam / namen. Als een element een ID heeft, wordt deze typisch weergegeven met een hash ('#').
 
-![DOM](doc/FrontEndDevelopment-DOM 2.png)
+![DOM](doc/FrontEndDevelopment-DOM%202.png)
 
 
 ## Referenties:
