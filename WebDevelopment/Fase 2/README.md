@@ -27,6 +27,7 @@ We noemen dit de DOM: *het Document Object Model*. In onderstaande afbeelding zi
 In de tweede afbeelding hier onder zijn de elementen uitgebreid door er een klasse ('class') of een HTML *id* aan toe te voegen.
 Een klasse wordt weergegeven door de naam van het element (P, SPAN, DIV) aan te vullen met een punt ('.') gevolgd door
 de klasse naam / namen. Als een element een ID heeft, wordt deze typisch weergegeven met een hash ('#').
+
 ![DOM](doc/FrontEndDevelopment-DOM 2.png)
 
 
