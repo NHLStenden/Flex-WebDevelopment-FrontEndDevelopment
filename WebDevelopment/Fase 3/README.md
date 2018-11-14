@@ -19,6 +19,12 @@ waarbij jouw Javascript code tussen de twee accolades {} moet komen.
 We zien verder hoe je met JQuery kunt reageren op gebeurtenissen zoals het klikken op een element (event handlers).
 Waar we vooral naar kijken is de Javascript variabele "`this`" en de inhoud van de `event` parameter.
 
+Je kunt JQuery op twee manieren gebruiken:
+  * Downloaden van de website en onderdeel maken van je eigen broncode
+  * Een CDN (Content Delivery Network) gebruiken, en een URL gebruiken buiten je eigen website om de 
+  code te laden.
+  
+
 ## Referenties:
   * [JQuery](http://jquery.com/)
   * [JQuery installatie en Download](https://jquery.com/download/)

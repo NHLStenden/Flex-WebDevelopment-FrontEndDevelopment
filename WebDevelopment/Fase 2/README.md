@@ -30,6 +30,47 @@ de klasse naam / namen. Als een element een ID heeft, wordt deze typisch weergeg
 
 ![DOM](doc/FrontEndDevelopment-DOM%202.png)
 
+Om een element terug te vinden in deze boom, kun je aan het document vragen: waar is het element met een bepaalde ID?
+Zorg er dus voor dat een ID uniek is, anders weet je niet de uitkomst van deze vraag.
+
+Deze notatie zul je herkennen uit de CSS-wereld. Immers, als je een element wilt opmaken met een bepaalde ID of klasse
+gebruik je dezelfde notatie. Kijkend naar het voorbeeld in bovenstaande afbeelding zo je in CSS het volgende 
+kunnen doen:
+```css
+  span.surname {
+     font-weight:bold;
+  }
+  #mytext {
+    margin-left:30px;
+    border-left:5px solid lightgrey;
+  }
+```
+
+In het voorbeeld wordt gebruik gemaakt van de functie `getElementById` (let op dat deze functies in Javascript hoofdletter
+gevoelig zijn):
+```javascript
+var container = document.getElementById("container");
+```
+Deze functie is beschikbaar binnen het object `document`. De website van MDN vermeld:
+
+> The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.
+
+Concreet kun je zeggen dat dit object onder andere het startpunt van de DOM bevat. Je kunt hier de wereld aan operaties op los laten zoals:
+  * zoeken met klassenaam
+  * zoeken met HTML ID
+  * zoeken met CSS-achtige queries
+  * elementen maken
+  * elementen aan elkaar koppelen
+  * elementen (inclusief kinderen) verwijderen
+  * etc...
+  
+In de file `js/index.js` van dit voorbeeld vindt je dergelijke voorbeeld terug.
+
+Nog een laatste tip: het eerste element van de DOM is te vinden met het volgende statement:
+```javascript
+var rootElement = document.documentElement;
+```
+Meestal zal dat het \<HTML\>-element zijn. 
 
 ## Referenties:
   * [Document Object Model](https://nl.wikipedia.org/wiki/Document_Object_Model)
