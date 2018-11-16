@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+       rect.rectangle {
+           stroke:blue;
+           stroke-width: 10px;
+           fill:yellow;
+       }
+    </style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <rect x="0" y="0" width="50" height="50" stroke="black" fill="red">
+        <animateMotion
+                path="m 0 0 l 0 130"
+                fill="freeze"
+                begin="0ms"
+                dur="2000ms"></animateMotion>
+        <animate
+                attributeType="XML"
+                attributeName="height"
+                from="50"
+                to="10"
+                fill="freeze"
+                begin="800ms"
+                dur="1000ms"></animate>
+    </rect>
+    <rect x="100" y="0" width="50" height="50" stroke="black" fill="blue" class="rectangle">
+        <animateMotion
+                path="m 0 0 l 0 130"
+                fill="remove"
+                begin="0ms"
+                dur="1000ms"></animateMotion>
+        <animate
+                attributeType="XML"
+                attributeName="height"
+                from="50"
+                to="10"
+                fill="freeze"
+                begin="0ms"
+                dur="3000ms"></animate>
+    </rect>
+</svg>
+</body>
+</html>

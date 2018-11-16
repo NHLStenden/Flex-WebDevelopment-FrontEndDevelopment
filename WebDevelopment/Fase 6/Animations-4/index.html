@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+       rect.rectangle {
+           stroke:blue;
+           stroke-width: 1px;
+           fill:yellow;
+           animation-name: myAnimation;
+           animation-duration: 10s;
+           transform-origin: center;
+       }
+
+        @keyframes myAnimation {
+            from {transform: none; fill:red}
+            to {transform: rotate(360deg) translateX(100px) translateY(100px);fill:lightgreen}
+        }
+
+    </style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="600" height="600"
+>
+    <rect x="0" y="100" width="50" height="50" stroke="black" fill="blue" class="rectangle"></rect>
+</svg>
+</body>
+</html>
