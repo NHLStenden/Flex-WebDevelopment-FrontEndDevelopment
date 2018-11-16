@@ -1,4 +1,4 @@
-#Front End Website met basic SVG - Animations 3
+# Front End Website met basic SVG - Animations 3
 Animaties via SVG
 
 In dit voorbeeld worden eenvoudige rechthoeken bewogen over het scherm. We maken gebruik van een SVG model (Scalable Vector Graphics).

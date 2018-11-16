@@ -1,4 +1,4 @@
-#Front End Website met basic SVG - Animations 3
+# Front End Website met basic SVG - Animations 3
 Animaties via SVG
 
 In dit voorbeeld maken we een combinatie van CSS-transformations en SVG objecten. We laten één rechthoek een rondje draaien
