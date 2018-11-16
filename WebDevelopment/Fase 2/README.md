@@ -22,13 +22,14 @@ HTML aan de *DOM* toevoegen, zodat we er op kunnen klikken met de muis.
 DOM: Document Object Model
 Als de browser HTML heeft opgehaald gaat hij een boomstructuur bouwen, waarin alle elementen en object in opgeslagen worden.
 We noemen dit de DOM: *het Document Object Model*. In onderstaande afbeelding zie je een voobeeld van zo'n boom.
-![DOM](doc/FrontEndDevelopment-DOM.png)
+
+![DOM](/Flex-WebDevelopment-FrontEndDevelopment.git/WebDevelopment/Fase%202/doc/FrontEndDevelopment-DOM.png)
 
 In de tweede afbeelding hier onder zijn de elementen uitgebreid door er een klasse ('class') of een HTML *id* aan toe te voegen.
 Een klasse wordt weergegeven door de naam van het element (P, SPAN, DIV) aan te vullen met een punt ('.') gevolgd door
 de klasse naam / namen. Als een element een ID heeft, wordt deze typisch weergegeven met een hash ('#').
 
-![DOM](doc/FrontEndDevelopment-DOM%202.png)
+![DOM](/Flex-WebDevelopment-FrontEndDevelopment.git/WebDevelopment/Fase%202/doc/FrontEndDevelopment-DOM%202.png)
 
 Om een element terug te vinden in deze boom, kun je aan het document vragen: waar is het element met een bepaalde ID?
 Zorg er dus voor dat een ID uniek is, anders weet je niet de uitkomst van deze vraag.
