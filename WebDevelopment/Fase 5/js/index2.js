@@ -1,25 +1,26 @@
 window.onload = initPage;
 
 function initPage(){
-  console.log(">> initPage ");
-  var myPromise = new Promise(promiseBody);
+    console.log(">> initPage ");
+    var myPromise = new Promise(function(resolveFunc, rejectFunc){
+        console.log(">> promiseBody ");
 
-  myPromise.then(myResolveFunction,myRejectFunc);
-  console.log("<< initPage ");
+        var rnd = Math.random() *10;
+        var rndString = rnd.toString();
+
+        if (rnd < 5) resolveFunc(rndString);
+        else rejectFunc("Random 5 or higher : "  + rndString);
+
+        console.log("<< promiseBody ");
+
+    });
+
+    myPromise.then(
+        data      => myResolveFunction(data),
+        errorInfo => myRejectFunc(errorInfo)
+    );
+    console.log("<< initPage ");
 }//initPage
-
-function promiseBody(resolveFunc, rejectFunc){
-    console.log(">> promiseBody ");
-
-    var rnd = Math.random() *10;
-    var rndString = rnd.toString();
-
-    if (rnd < 5) resolveFunc(rndString);
-    else rejectFunc("Random 5 or higher : "  + rndString);
-
-    console.log("<< promiseBody ");
-}//promiseBody
-
 
 function myResolveFunction(data){
     console.log(">> myResolveFunction ");

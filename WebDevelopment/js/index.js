@@ -12,7 +12,12 @@ function LoadMarkDownFiles(){
         {dir:"Fase%203", caption:"Fase 3"},
         {dir:"Fase%204", caption:"Fase 4"},
         {dir:"Fase%205", caption:"Fase 5"},
+        {dir:"Fase%205b", caption:"Fase 5b"},
         {dir:"Fase%206", caption:"Fase 6"},
+        {dir:"Fase%207", caption:"Fase 7"},
+        {dir:"Fase%208", caption:"Fase 8"},
+        {dir:"Fase%209", caption:"Fase 9"},
+        {dir:"Fase%2010", caption:"Fase 10"},
     ];
 
     for(var obj in files){
