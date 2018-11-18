@@ -1,0 +1,38 @@
+body {
+    background-color:black;
+    color:white;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size:15pt;
+}
+
+div.container {
+    width:100%;
+    clear: both;
+}
+
+div.container > P {
+    font-size:34pt;
+
+    font-family: sans-serif;
+    text-align: center;
+    vertical-align: center;
+}
+
+div.container > P > A {
+    color:white;
+    text-decoration-line: none;
+    padding:10pt;
+}
+
+div.container > P > A:hover {
+    background-color:lightgray;
+    color:black;
+}
+
+
+img.logo {
+    float:left;
+}
