@@ -4,6 +4,7 @@ export class MarkdownSupporter {
 
     constructor (basedir){
         this.promises = [];
+        this.itemList = [];
         this.basedir  = basedir;
     }
     /**
@@ -26,20 +27,28 @@ export class MarkdownSupporter {
             $(li).append(link);
             $(ul).append(li);
 
-            this.promises.push(this.LoadMarkDownFile(jqueryID, idTab, itemlist[obj].dir));
+            var newItem = this.LoadMarkDownFile(jqueryID, idTab, itemlist[obj].dir);
+            this.itemList.push(newItem);
+            this.promises.push(newItem.promise);
         }
 
-        for(var i in this.promises) this.executePromise(this.promises[i]);
-
         // wacht tot alle promises voldaan zijn, zodat we de Jquery TABS kunnen aanmaken en de code-highlighter aan het werk kunnen zetten
-        Promise.all(this.promises).then(function (values) {
-            $("#" + idHTML).tabs();
+        var allPromises = Promise.all(this.promises);
+        allPromises.then(
+            values => {
+                console.log("All promises fullfilled");
 
-            $('pre code').each(function (i, block) {
-                hljs.highlightBlock(block);
-            });
-        });
+                // create JQueryUI Tabs
+                $("#" + idHTML).tabs();
 
+                // enable syntax highlighting on ALL found pre>code blocks
+                $('pre code').each(function (i, block) {
+                    hljs.highlightBlock(block);
+                });
+            }//resolve function all promises
+        );
+
+        for(var i in this.itemList) this.executePromise(this.itemList[i]);
     }//LoadMarkDownFiles
 
     LoadMarkDownFile(idHTML, idTab, directory) {
@@ -65,20 +74,20 @@ export class MarkdownSupporter {
     }//LoadMarkDownFile
 
     executePromise(promObj){
-        var prom  = promObj.promise;
-        var div   = promObj.container;
+        var prom      = promObj.promise;
+        var div       = promObj.container;
         var directory = promObj.directory;
+        var basedir   = this.basedir;
 
         prom.then(
             content => {
-                console.log("retrieved Markdown File");
+                console.log("retrieved Markdown File for " + directory);
 
                 // maak een nieuwe Markdown converter
                 var converter = new showdown.Converter();
 
                 // converteer
                 var html = converter.makeHtml(content);
-                console.log(directory, html);
 
                 // voeg resultaat toe aan de DOM
                 $(div).html(html);
@@ -88,9 +97,11 @@ export class MarkdownSupporter {
 
                 // remove <something.html> from end path (using lazy search from a / up to .html
                 path = path.replace(/\/.*?\.html$/g, "");
+
+                // collect all images
                 $("img", div).each(function (idx, element) {
                     var src = $(element).attr("src");
-                    src = path + directory + "/" + src;
+                    src = path + basedir +"/" + directory + "/" + src;
 
                     $(element).attr("src", src);
                 });
@@ -99,6 +110,8 @@ export class MarkdownSupporter {
                 $("a", div).each(function (idx, element) {
                     $(element).attr("target", "_blank");
                 });
+
+                console.log("Promise finished for " + directory);
             }
         );
     }//executePromise
