@@ -6,8 +6,18 @@ waar extra informatie in staat. Om deze te lezen installeer je een Markdown (.md
 of lees je de betreffende README.md via GITHub (als je een map opent in GITHub wordt deze automatisch onder de 
 lijst met bestanden getoond in opgemaakt formaat).
 
+## Gebruik met IDE
+Om deze voorbeelden vanuit *Jetbrains Webstorm* te gebruiken op je lokale machine, dien je opties aan te zetten
+dat "Unsigned Requests" toegestaan zijn:
+  * "Allow unsigned requests" option enabled (Settings | Build, Execution, Deployment | Debugger)
+
+Hiermee kan onderstaande foutmelding worden voorkomen:
+  * Page 'http://localhost:63343/.... ' requested without authorization, you can copy URL and open it in browser to trust it.
+
 Veel plezier
 
 Martin Molema
 email: [martin.molema@nhl.nl](mailto:martin.molema@nhl.nl)
 
+## Referenties:
+[WebStorm Debugger setup](https://www.jetbrains.com/help/webstorm/configuring-javascript-debugger.html)
