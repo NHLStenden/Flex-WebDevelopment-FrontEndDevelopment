@@ -1,12 +1,12 @@
 export class MyHttp {
     getDataFromIMDB(url){
-        console.log(">>getDataFromIMDB");
+        console.log(">>getDataFromURL");
 
         // create a promise that will be returned as the function's result
         // the calling function can supply the resolve and reject function.
 
         var prom = new Promise(function(resolve, reject) {
-            console.log("getDataFromIMDB::Promise body");
+            console.log("getDataFromURL::Promise body");
 
             // create an object to call a REST API
             var xhr = new XMLHttpRequest();
@@ -32,8 +32,8 @@ export class MyHttp {
             xhr.send();
 
         });
-        console.log("<<getDataFromIMDB");
+        console.log("<<getDataFromURL");
         return prom;
-    }//getDataFromIMDB
+    }//getDataFromURL
 
 }//class MyHttpClass

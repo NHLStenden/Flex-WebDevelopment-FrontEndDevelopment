@@ -27,7 +27,7 @@ function getDataFromIMDB(url){
 
     });
     return prom;
-}//getDataFromIMDB
+}//getDataFromURL
 
 function ShowDataFromIMDB(url){
     var prom = getDataFromIMDB(url);

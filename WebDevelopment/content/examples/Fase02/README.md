@@ -65,7 +65,7 @@ Concreet kun je zeggen dat dit object onder andere het startpunt van de DOM beva
   * elementen (inclusief kinderen) verwijderen
   * etc...
   
-In de file `js/index.js` van dit voorbeeld vindt je dergelijke voorbeeld terug.
+In de file `js/examples.js` van dit voorbeeld vindt je dergelijke voorbeeld terug.
 
 Nog een laatste tip: het eerste element van de DOM is te vinden met het volgende statement:
 ```javascript
