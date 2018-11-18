@@ -21,18 +21,32 @@ div.container > P {
     vertical-align: center;
 }
 
-div.container > P > A {
+div.container > P > span {
     color:white;
     text-decoration-line: none;
     padding:10pt;
 }
 
-div.container > P > A:hover {
+div.container > P > span:hover {
     background-color:lightgray;
     color:black;
+    cursor: pointer;
 }
 
 
 img.logo {
     float:left;
+}
+
+/* The animation code */
+@keyframes example {
+    from {margin-left:0px}
+    to {margin-left:2000px}
+}
+
+/* The element to apply the animation to */
+body > div > p.clicked {
+    animation-name: example;
+    animation-duration: 4s;
+    animation-fill-mode:forwards;
 }
