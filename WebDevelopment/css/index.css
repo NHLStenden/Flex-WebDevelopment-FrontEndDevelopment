@@ -11,6 +11,7 @@ h1 {
 div.container {
     width:100%;
     clear: both;
+    overflow-x:hidden;
 }
 
 div.container > P {
@@ -19,6 +20,7 @@ div.container > P {
     font-family: sans-serif;
     text-align: center;
     vertical-align: center;
+    white-space: nowrap;
 }
 
 div.container > P > span {
