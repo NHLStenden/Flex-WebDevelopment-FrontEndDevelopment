@@ -13,13 +13,14 @@ function initPage(){
     "Bert",
     "Mark",
     "Arjan",
+    "ABCDE",
     "x",
     "y",
     "z",
   ];
-  document.write("<ul>");
+  document.write("<ol>");
   for (var i in items){
       document.write("<li>" + items[i] + "</li>");
   }
-  document.write("</ul>");
+  document.write("</ol>");
 }
