@@ -24,8 +24,8 @@ Gebruik de uitkomsten van opdracht A, maar zet nu in je HTML een `<p>`-element, 
 dat deze bestaande tekst, en de lijst uit opdracht A in de juiste volgorde achter elkaar komen?
 
 ## Referenties 
-[Script-element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
-[Javascript Arrays (instructie)](https://www.w3schools.com/js/js_arrays.asp)
-[Javascript Arrays (ref)](https://www.w3schools.com/jsref/jsref_obj_array.asp)
+  * [Script-element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
+  * [Javascript Arrays (instructie)](https://www.w3schools.com/js/js_arrays.asp)
+  * [Javascript Arrays (ref)](https://www.w3schools.com/jsref/jsref_obj_array.asp)
 
 [Uitwerkingen](../../solutions/opdracht02)
