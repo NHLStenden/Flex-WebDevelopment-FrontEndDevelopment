@@ -7,6 +7,8 @@ code om de EventListener te koppelen. Haal onderstaande regel weg.
 ```javascript
   mijnobject.addEventListener("click", function)
 ```
+Ken nu in één keer achteraf alle eventhandlers toe door middel van een `document.querySelectorAll()`
+in combinatie met een for-lus.
 
 De functie die je uit wilt voeren kun je als "anonymous function" implementeren, of als losse functie. Werk beide
 varianten uit. 

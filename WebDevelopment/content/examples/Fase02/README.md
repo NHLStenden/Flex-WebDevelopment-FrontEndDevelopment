@@ -71,7 +71,12 @@ Nog een laatste tip: het eerste element van de DOM is te vinden met het volgende
 ```javascript
 var rootElement = document.documentElement;
 ```
-Meestal zal dat het `<HTML>`-element zijn. 
+Meestal zal dat het `<HTML>`-element zijn. Open je browser en een willekeurige webpagina. Ga naar
+de javascript console en type daar onderstaande in en druk op enter:
+```javascript
+document.documentElement
+```
+Als het goed is krijg je netjes de HTML, Head en Body te zien.
 
 ## Referenties:
   * [Document Object Model](https://nl.wikipedia.org/wiki/Document_Object_Model)
