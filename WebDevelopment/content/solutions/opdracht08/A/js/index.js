@@ -26,13 +26,8 @@ function initPage(){
         ol.appendChild(objListItem);
     }
 
-    var items = document.querySelectorAll("#mijnlijstje li");
-    for(const item  of items){
-        item.addEventListener("click", clickHandler);
-    }
-
     var body = document.querySelector("body");
-    body.addEventListener("click", function(evt){alert("click on body")});
+    body.addEventListener("click", clickHandler);
 
 }//initPage()
 
@@ -40,8 +35,53 @@ function clickHandler(evt){
     console.log(this);
     console.log(evt);
 
-    var text1 = this.textContent;
-    var text2 = evt.target.textContent;
+    var text = evt.target.textContent;
+    var elType = evt.target.tagName;
 
-    alert(text1 + "/" + text2);
+    alert("U heeft geklikt op een element van het type " + elType + " met inhoud :: " + text );
+
+    var path = evt.path;
+    var upText = getPathRecursiveUp(path);
+    var downText = getPathRecursiveDown(path);
+
+    alert("Up : " + upText  + " -------------- Down: " + downText);
+
 }//clickHandler()
+
+
+function getPathRecursiveUp(arrItems){
+  if (arrItems.length == 0) return "";
+  var newPath = arrItems;
+  var text =convertPathPartToString(arrItems[0]);
+  return text + " > " + getPathRecursiveUp([].slice.call(newPath,1));
+}//getPathRecursiveUp
+
+function getPathRecursiveDown(arrItems){
+    if (arrItems.length == 0) return " / ";
+    var newPath = arrItems;
+    var text = convertPathPartToString(arrItems[0]);
+    return getPathRecursiveDown([].slice.call(arrItems,1)) + "/" + text;
+}//getPathRecursiveDown
+
+function convertPathPartToString(part){
+    var name = "?";
+
+    switch(part.constructor.name){
+        case "HTMLLIElement":
+        case "HTMLOListElement":
+        case "HTMLBodyElement":
+        case "HTMLHtmlElement":
+        case "HTMLParagraphElement":
+            name = part.tagName;
+            break;
+        case "HTMLDocument":
+            name = "{Document}";
+            break;
+        case "Window":
+            name = "{Window}";
+            break;
+    }
+
+    return name;
+
+}//convertPathPartToString

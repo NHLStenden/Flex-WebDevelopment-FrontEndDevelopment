@@ -1,47 +1,62 @@
-# Uitwerking opdracht 07
+# Uitwerking opdracht 08
+In deze uitwerking wordt gebruik gemaakt van bepaalde informatie uit het Event-object dat de browser aanmaakt
+als je een click-handler laat uitvoeren bij een event. De clickHandler installeren we eenvoudig zo:
 
-### Variant A
-De eerste oplossing is redelijk voor de hand liggend. Door onderstaande code toe te voegen krijgen we een
-click-handler op de `<body>`.
 ```javascript
     var body = document.querySelector("body");
-    body.addEventListener("click", function(evt){alert("click on body")});
+    body.addEventListener("click", clickHandler);
 ```
 
-Het ongewenste effect is dat als we op een `<li>`-item klikken, we óók nog een melding krijgen dat we op de 
-`<body>` hebben geklikt. Hoe kan dat nu? Wat je hier ervaart heet 'event bubbling'. Bij de referenties 
-onderaan de pagina krijg je een nette uitleg.
+Let op dat je bij het toewijzen van de functie voor een click-handler dus geen haakjes gebruikt! Onderstaande is dus **fout**:
+```javascript
+    var body = document.querySelector("body");
+    body.addEventListener("click", clickHandler());
+```
+en ook **niet**:
+```javascript
+    var body = document.querySelector("body");
+    body.addEventListener("click", clickHandler(evt));
+```
 
-Met event-bubbling regelt de browser dat elk element dat op elkaar gestapeld is in de DOM, het event 
-aangeboden krijgt. Wederom onderstaande afbeelding. 
-![DOM](../../examples/Fase02/doc/FrontEndDevelopment-DOM%202.png)
+Je geeft dus alleen de naam van de functie op. De click-handler zelf ziet er als volgt uit:
 
-Stel dat één van de blauwe  `<li>`-elementen aangeklikt wordt met de muis. De volgende elementen
-krijgen dan allemaal het event aangeboden:
+```javascript
+function clickHandler(evt){
+    var text = evt.target.textContent;
+    var elType = evt.target.tagName;
 
-  * html > body > div.container > UL.mylist > li
-  * html > body > div.container > UL.mylist 
-  * html > body > div.container 
-  * html > body 
+    alert("U heeft geklikt op een element van het type " + elType + " met inhoud :: " + text );
 
-Waarschijnlijk is dat onnodig en wil je dat de browser stopt bij het afhandelen van het event als jij klaar
-bent met de event-handler voor de gekozen `<li>`. In de tweede variant gaan we dat regelen.
+    var path = evt.path;
+    var upText = getPathRecursiveUp(path);
+    var downText = getPathRecursiveDown(path);
 
-### Variant B
-Om het event-bubbling af te wenden gebruiken we de functies `stopPropagation` en / of `preventDefault`.
-Zie weer de referenties onderaan deze pagina voor de uitgebreide informatie. 
+    alert("Up : " + upText  + " -------------- Down: " + downText);
 
-De functie `stopPropagation()` zorgt er voor dat het event niet naar boven bubbelt. Dat is normaliter voldoende. Echter,
-als je bijvoorbeeld een aankruisvakje (`<input type="checkbox" />`) gebruikt, dan kun je met `preventDefault` voorkomen
-dat als iemand het vakje aanklikt, het vinkje niet verschijnt (het standaard of 'default' gedrag).  
+}//clickHandler()
+```
+Ik gebruik hier twee functies om het path (`evt.path`) om te zetten naar een leesbare tekst. Bijvoorbeeld:
+```text
+Up : LI > OL > BODY > HTML > {Document} > {Window} >  
+-------------- 
+Down:  / /{Window}/{Document}/HTML/BODY/OL/LI
+```
 
+De recursieve functies zijn op een haar na gelijk. Het verschil zit hem in de aanroep van de recursie:
+
+Variant 1: eerst het huidige element noemen, en dan recursie
+```javascript
+  return text + " > " + getPathRecursiveUp([].slice.call(newPath,1));
+```
+Variant 2: eerst recursie en dan het huidige element noemen.
+
+```javascript
+  return getPathRecursiveDown([].slice.call(arrItems,1)) + "/" + text;
+ ```
 
 ## Referenties:
-  * [Document Object Model](https://nl.wikipedia.org/wiki/Document_Object_Model)
   * [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent)
   * [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event)
   * [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
-  * [stopPropagation](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation)
-  * [preventDefault](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
   * [event bubbling](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture)
   * [Event Delegation](https://davidwalsh.name/event-delegate)
