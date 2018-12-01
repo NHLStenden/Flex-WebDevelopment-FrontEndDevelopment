@@ -1,0 +1,11 @@
+body {
+    font-family: sans-serif;
+}
+
+li.clickable {
+    cursor: pointer;
+}
+
+li.SELECTED {
+    background-color: lightgrey;
+}
