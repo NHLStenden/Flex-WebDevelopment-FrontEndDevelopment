@@ -5,7 +5,7 @@ manier achter te komen waar het click-event als eerste is geland.
 
 Maak gebruik van onderstaande `<body>`
 
-````html
+```html
 <body>
   <h1>Welkom bij opdracht 8</h1>
   <P>In onderstaande lijst staan 15 items</P>
