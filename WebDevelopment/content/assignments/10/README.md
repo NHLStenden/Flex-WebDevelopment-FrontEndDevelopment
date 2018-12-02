@@ -14,7 +14,7 @@ Maak met jQuery onderstaande `<body>`. Het startpunt is `<div class="container">
       <li class="clickable" data-mijnvolgnr="6" data-mijn-volg-nr="06">Item 6</li>
       <li class="clickable" data-mijnvolgnr="7" data-mijn-volg-nr="07">Item 7</li>
       <li class="clickable" data-mijnvolgnr="8" data-mijn-volg-nr="08">Item 8</li>
-      <li class="clickable" data-mijnvolgnr="9" data-mijn-volg-nr="09">Item 9</li>
+      <li class="clickable" data-mijnv**olgnr="9" data-mijn-volg-nr="09">Item 9</li>
     </ol>
   </div>
 </body>

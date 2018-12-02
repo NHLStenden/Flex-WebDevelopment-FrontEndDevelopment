@@ -1,0 +1,39 @@
+body {
+  font-family: sans-serif;
+}
+
+div.container ul li {
+    cursor: pointer;
+}
+
+.red {
+    background-color: red;
+    color:white;
+}
+
+.blue {
+    background-color: blue;
+    color:white;
+}
+
+.grey {
+    background-color: grey;
+    color:white;
+}
+
+.gold {
+    background-color: gold;
+    color:black
+}
+
+.odd {
+  font-style:italic;
+}
+
+.even {
+    font-weight:bold;
+}
+
+.color {
+    text-decoration: underline;
+}
