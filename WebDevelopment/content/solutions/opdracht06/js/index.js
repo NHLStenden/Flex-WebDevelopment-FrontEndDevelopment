@@ -31,6 +31,9 @@ function initPage(){
         item.addEventListener("click", clickHandler);
     }
 
+    var body = document.querySelector("body");
+    body.addEventListener("click",function(evt){alert("hallo")});
+
 }//initPage()
 
 function clickHandler(evt){

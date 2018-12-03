@@ -26,7 +26,6 @@ Schrijf een functie die de click-events van de body afvangt en de volgende zaken
 Gebruik voor de eerste bullit een recursieve functie! Maak twee varianten:
   * de eerste begint bij de body en daalt af in de structuur
   * de tweede begint bij het aangeklikte element en gaat omhoog in de structuur
-  
-  return getPathRecursiveDown([].slice.call(arrItems,1)) + "/" + text;
+
   
 

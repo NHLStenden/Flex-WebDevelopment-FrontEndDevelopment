@@ -43,9 +43,15 @@ function clickHandler(evt){
     var path = evt.path;
     var upText = getPathRecursiveUp(path);
     var downText = getPathRecursiveDown(path);
+    var upText2 = getPathRecursiveParentUp(evt.target);
+    var upText3 = getPathParentUp(evt.target);
+    var downText2 = getPathParentDown(evt.target);
 
-    alert("Up : " + upText  + " -------------- Down: " + downText);
+    //alert("Up : " + upText  + " -------------- Down: " + downText);
 
+    //alert(upText2);
+    //alert(upText3);
+    alert(downText2);
 }//clickHandler()
 
 
@@ -60,8 +66,35 @@ function getPathRecursiveDown(arrItems){
     if (arrItems.length == 0) return " / ";
     var newPath = arrItems;
     var text = convertPathPartToString(arrItems[0]);
-    return getPathRecursiveDown([].slice.call(arrItems,1)) + "/" + text;
+    return getPathRecursiveDown([].slice.call(newPath,1)) + "/" + text;
 }//getPathRecursiveDown
+
+function getPathRecursiveParentUp(node){
+    if (! node.parentNode) return "/";
+    return getPathRecursiveParentUp(node.parentNode) + "/" +  node.tagName ;
+}//getPathRecursiveDown
+
+function getPathParentUp(node){
+    var result = "";
+    while(node.parentNode) {
+        result += "/" + node.tagName;
+        node = node.parentNode;
+    }
+    return result;
+}//getPathParentUp
+
+
+function getPathParentDown(node){
+    var result = "";
+    var items = [];
+    while(node.parentNode) {
+        items.push(node.tagName);
+        node = node.parentNode;
+    }
+    for(var i=items.length-1;i>=0;i--) result+=items[i] + "/";
+    return result;
+}//getPathParentUp
+
 
 function convertPathPartToString(part){
     var name = "?";
