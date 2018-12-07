@@ -1,4 +1,4 @@
-# Opdracht 11
+# Opdracht 11 - jQuery event handling
 Gebruik onderstaande body
 ```html
     <div class="container">

@@ -1,4 +1,4 @@
-# Opdracht 06
+# Opdracht 06 - DOM & Events - this & event parameter
 In deze opdracht gaan we kijken of we kunnen achterhalen welk item er precies aangeklikt is. We gebruiken
 hiervoor de variabele `this` en de functie parameter `evt`. 
 

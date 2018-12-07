@@ -1,4 +1,4 @@
-# Opdracht 08
+# Opdracht 08 - DOM & Body event handling
 In de vorige opdracht hebben we zowel een click handler gebouwd voor de `<body>` als de list-items `<li>`.
 In de volgende variant gaan we alleen een click handler bouwen voor de `<body>` en proberen we er op een andere
 manier achter te komen waar het click-event als eerste is geland.

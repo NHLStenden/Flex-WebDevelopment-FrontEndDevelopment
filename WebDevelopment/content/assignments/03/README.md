@@ -1,4 +1,4 @@
-# Opdracht 03
+# Opdracht 03 - DOM
 Kijk voordat je met deze opdracht aan de slag gaat naar het voorbeeld in 'Fase 02' en lees de bijbehorende documentatie.
 
 In deze opdracht ga je dus met DOM-manipulatie aan de slag. Je kunt het beste een moderne browser met goede Javascript-

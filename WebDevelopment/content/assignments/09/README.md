@@ -1,4 +1,4 @@
-# Opdracht 09 
+# Opdracht 09 - Jquery basics
 We gaan nu aan de slag met jQuery. Download jQuery (zie onderstaande link) en zet de gedownloade file in je project.
 
 Maak gebruik van onderstaande `<body>`

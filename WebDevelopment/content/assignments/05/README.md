@@ -1,4 +1,4 @@
-# Opdracht 05
+# Opdracht 05 - DOM & Events 2
 In deze opdracht gaan we niet alleen de DOM uitbreiden, we gaan ook gebeurtenissen ('events') koppelen en 
 afhandelen. Ditmaal doen we dat slimmer met een queryselecter achteraf, in plaats van bij elk los object
 

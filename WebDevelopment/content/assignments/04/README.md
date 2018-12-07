@@ -1,4 +1,4 @@
-# Opdracht 04
+# Opdracht 04 - DOM & Events
 In deze opdracht gaan we niet alleen de DOM uitbreiden, we gaan ook gebeurtenissen ('events') koppelen en 
 afhandelen.
 

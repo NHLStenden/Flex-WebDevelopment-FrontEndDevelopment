@@ -10,7 +10,13 @@ $( function() {
         {dir:"opdracht06", caption:"opdracht 6"},
         {dir:"opdracht07", caption:"opdracht 7"},
         {dir:"opdracht08", caption:"opdracht 8"},
-        {dir:"opdracht09", caption:"opdracht 9"}
+        {dir:"opdracht09", caption:"opdracht 9"},
+        {dir:"opdracht10", caption:"opdracht 10"},
+        {dir:"opdracht11", caption:"opdracht 11"},
+        {dir:"opdracht12", caption:"opdracht 12"},
+        {dir:"opdracht13", caption:"opdracht 13"},
+        {dir:"opdracht14", caption:"opdracht 14"},
+        {dir:"opdracht15", caption:"opdracht 15"}
     ];
 
     var mdSupporter = new MarkdownSupporter("content/solutions");
