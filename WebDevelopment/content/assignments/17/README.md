@@ -7,11 +7,15 @@ je in de HTML je tekening maakt, en deze meteen beschikbaar komt.
 
 Het tekenen van dergelijke SVG-afbeeldingen kun je overigens ook met andere tools doen zoals Inkscape.
 
+## Opdracht A
 Download onderstaande afbeelding en zet deze in je HTML file:
 ![Ferrari Logo](https://upload.wikimedia.org/wikipedia/sco/d/d1/Ferrari-Logo.svg)
 
 [URL](https://upload.wikimedia.org/wikipedia/sco/d/d1/Ferrari-Logo.svg)
 
+## Opdracht B
+Kijk eens hoe je je HTML (significant) kan verkleinen! Er is namelijk nog een andere manier om je SVG als afbeelding
+in je website te krijgen.
 
 ## Referenties
   * [SVG](https://nl.wikipedia.org/wiki/Scalable_Vector_Graphics)
