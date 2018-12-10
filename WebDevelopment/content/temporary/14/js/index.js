@@ -1,11 +1,16 @@
 window.onload=initPage;
 
 function resolveFunction(data){
+    console.log( "resolveFunction()");
     console.log("resolved: " + data);
+    return 100+data;
 }//resolveFunction
 
 function rejectFunction(errormessage){
+    console.log( "rejectFunction()");
     console.log("error:" + errormessage);
+
+    return "Errormelding : " + errormessage;
 }//rejectFunction
 
 function myPromiseHandler(resolve, reject){
@@ -25,21 +30,13 @@ function myPromiseHandler(resolve, reject){
 function initPage(){
     console.log("initPage()");
     var myPromise = new Promise(myPromiseHandler);
-  console.log('myPromise aangemaakt');
+    console.log('myPromise aangemaakt');
 
-  myPromise.then(
-      function(data){resolveFunction(data)},
-      function(errormessage){rejectFunction(errormessage)}
-   );
-
-  console.log("myPromise.then finished");
-  console.log(myPromise);
-
-  myPromise.then(
-        data => resolveFunction(data),
-        errormessage => rejectFunction(errormessage)
+    myPromise.then(
+        resolveFunction,
+        rejectFunction
     );
-  console.log("myPromise.then 2 finished");
-  console.log(myPromise);
 
+    console.log("myPromise.then finished");
+    console.log(myPromise);
 }//initPage

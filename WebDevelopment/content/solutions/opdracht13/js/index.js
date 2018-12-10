@@ -24,8 +24,13 @@ function myPromiseHandler(resolve, reject){
 }//myPromiseHandler
 
 function initPage(){
+  console.log("initPage()");
   var myPromise = new Promise(myPromiseHandler);
 
+
+  window.setTimeout(function(){console.log("klaar")},10000);
+
+  console.log("Promise aangemaakt");
   // dit levert een foutmelding in geval van de **Reject**
     console.log(myPromise);
 }//initPage

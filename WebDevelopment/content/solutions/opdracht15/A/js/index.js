@@ -23,8 +23,8 @@ function initPage(){
   var myPromise = new Promise(myPromiseHandler);
 
   myPromise.then(
-      function(data)        { return resolveFunction(data)       } ,
-      function(errormessage){ return rejectFunction(errormessage)}
+      resolveFunction,
+      rejectFunction
    ).then(
         data         => console.log("then 2 :: resolve ==> " + data       ) ,
         errormessage => console.log("then 2 :: reject ==> " + errormessage)

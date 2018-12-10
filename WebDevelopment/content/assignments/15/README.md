@@ -8,6 +8,14 @@ In de vorige opdracht stuurden we alleen wat informatie naar de console in de `r
 Het is echter gebruikelijk dat deze functies gegevens terugsturen. Dus verander de functies zodat ze de data die ze
 binnenkrijgen ook weer terugsturen (`return ....`), maar met een kleine verandering door er bijvoorbeeld iets
 aan toe te voegen.
+ 
+ Gebruik onderstaande `then`-statement :
+```javascript
+   myPromise.then(
+       resolveFunction,
+       rejectFunction
+    ).....
+```
 
 # Opdracht B
 Nu we resultaten terugkrijgen van deze functies gaan we die informatie doorgeven aan een volgende `then`-functie:
@@ -18,6 +26,6 @@ Nu we resultaten terugkrijgen van deze functies gaan we die informatie doorgeven
 De vraag is natuurlijk wat er op de verschillende stippeltjes moet komen te staan.
 
 ## Referenties
-[Using Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
-[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-[Promises - chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Chaining)
+  * [Using Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
+  * [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+  * [Promises - chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Chaining)

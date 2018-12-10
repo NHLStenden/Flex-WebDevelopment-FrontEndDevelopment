@@ -21,6 +21,11 @@ De tweede is optioneel. Om de code uit te voeren breiden we dus onze code uit al
    );
 ```
 
+of verkort : 
+```javascript
+myPromise.then(resolveFunction, rejectFunction   );
+```
+
 Schematisch ziet dat er als volgt uit:
 
 ![Resolved](/doc/Resolved.png)
