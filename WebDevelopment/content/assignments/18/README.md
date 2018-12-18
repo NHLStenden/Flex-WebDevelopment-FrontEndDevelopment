@@ -30,11 +30,11 @@ Deze oplossing kan in één regel Javascript opgelost worden met jQuery. Hoe zie
 mogelijke verkortingen die je kent! Hoe leesbaar is deze oplossing *nu* voor jou? Lukt het jou om deze stijl van 
 coderen eigen te maken?  
 
-En wat is het addertje
-onder het gras van deze oplossing? (hint: `this`).  
+En wat is het addertje onder het gras van deze oplossing? (hint: `this`).  
 
 ## Referenties
   * [SVG](https://nl.wikipedia.org/wiki/Scalable_Vector_Graphics)
   * [SVG MDN](https://developer.mozilla.org/nl/docs/Web/SVG)
   * [SVG W3Schools](https://www.w3schools.com/graphics/svg_intro.asp)
   * [Inkscape](https://inkscape.org/)
+  
