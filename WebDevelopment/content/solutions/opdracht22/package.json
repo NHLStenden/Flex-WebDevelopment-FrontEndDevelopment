@@ -1,0 +1,14 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "babel src -d lib",
+    "start:dev": "webpack-dev-server"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.2.0",
+    "babel-cli": "^6.0.0",
+    "webpack": "^4.27.1",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
