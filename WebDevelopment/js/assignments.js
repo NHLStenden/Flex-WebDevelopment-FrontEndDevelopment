@@ -16,7 +16,14 @@ $( function() {
         {dir:"12", caption:"Opdracht 12"},
         {dir:"13", caption:"Opdracht 13"},
         {dir:"14", caption:"Opdracht 14"},
-        {dir:"15", caption:"Opdracht 15"}
+        {dir:"15", caption:"Opdracht 15"},
+        {dir:"16", caption:"Opdracht 16"},
+        {dir:"17", caption:"Opdracht 17"},
+        {dir:"18", caption:"Opdracht 18"},
+        {dir:"19", caption:"Opdracht 19"},
+        {dir:"20", caption:"Opdracht 20"},
+        {dir:"21", caption:"Opdracht 21"},
+        {dir:"22", caption:"Opdracht 22"}
     ];
 
     var mdSupporter = new MarkdownSupporter("content/assignments");
