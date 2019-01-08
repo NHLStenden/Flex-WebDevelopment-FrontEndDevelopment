@@ -43,6 +43,32 @@ Javascript. Dat gaat door middel van de volgende stappen:
   1. voer de kloon (met gegevens er in) toe aan de DOM
   1. herhaal vanaf stap 1
   
+  
+Uiteindelijk ziet de basis HTML er dus als volgt uit:
+```html
+<body>
+  <div class="container">
+    <table>
+      <thead>
+          <th>Jaartal</th>
+          <th>Naam</th>
+          <th>Afbeelding</th>
+      </thead>
+      <tbody/>
+    </table>
+  </div>
+  <template id="table-rows">
+    <tr>
+        <td></td>
+        <td></td>
+        <td><img/></td>
+    </tr>  
+  </template>
+
+</body>
+
+```
+
 De stappen in code:
 ### Stap 1
 Zoek het `<template>`-element op.
@@ -63,8 +89,8 @@ aan het `document` een vraag te stellen (zoals `.getElementById()` of `.querySel
 ```javascript
   const cells = clone.querySelectorAll("td");
   const img   = clone.querySelectorAll("td img");
-  td[0].textContent = "1982";
-  td[1].textContent = "The Return of Martin Guerre";
+  cells[0].textContent = "1982";
+  cells[1].textContent = "The Return of Martin Guerre";
   img.src = "https://m.media-amazon.com/images/M/MV5BNjdiYjBjMDYtNmFjNy00MDg0LWE2YTctMjA0ODhmMGQwNDM0XkEyXkFqcGdeQXVyMjI4MjA5MzA@._V1_SX300.jpg";
 ```
 
