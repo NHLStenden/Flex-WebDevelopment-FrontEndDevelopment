@@ -51,8 +51,8 @@ function fillTableFromTemplate(idTable, idTemplate, arrData){
   arrData.forEach((item)=>{
       const clone = document.importNode(template.content, true);
 
-      const tdTitle = clone.querySelector(".title");
-      const tdYear = clone.querySelector(".year");
+      const tdTitle   = clone.querySelector(".title");
+      const tdYear    = clone.querySelector(".year");
       const imgPoster = clone.querySelector(".poster img");
 
       imgPoster.src       = item.Poster;
