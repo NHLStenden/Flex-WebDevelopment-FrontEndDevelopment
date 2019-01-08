@@ -5,7 +5,11 @@ $( function() {
       window.location = href;
   });
 
-  $("body > div > p").click(function(evt){
+  var xyz = 10;
+
+  $("body > div > p").on("click",{ abc:xyz},function(evt){
+
+      console.log(evt.data.abc);
 
       $("body > div > p").not(this).removeClass("clicked");
       $(this).addClass("clicked");
