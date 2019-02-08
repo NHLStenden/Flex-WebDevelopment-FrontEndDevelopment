@@ -101,7 +101,7 @@ $(document).ready(initPage);
 
 function initPage() {
   var calc = new _lib_MyCalculator_js__WEBPACK_IMPORTED_MODULE_0__["MyCalculator"](10);
-  calc.Add(10).Multiply(5).Subtract(5);
+  calc.Add(14).Multiply(5).Subtract(5);
   console.log(calc.Value());
 } //initPage
 

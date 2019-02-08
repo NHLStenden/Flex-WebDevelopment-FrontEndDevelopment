@@ -7,7 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch"
   },
-  "keywords": ["Babel","WebPack","Flex","NHL Stenden HBO-ICT Flex"],
+  "keywords": [
+    "Babel",
+    "WebPack",
+    "Flex",
+    "NHL Stenden HBO-ICT Flex"
+  ],
   "author": "Martin Molema",
   "license": "ISC",
   "devDependencies": {
@@ -16,6 +21,6 @@
     "babel-loader": "^8.0.4",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack-dev-server": "^3.1.14"
   }
 }
