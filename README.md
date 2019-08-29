@@ -17,7 +17,7 @@ Hiermee kan onderstaande foutmelding worden voorkomen:
 Veel plezier
 
 Martin Molema
-email: [martin.molema@nhl.nl](mailto:martin.molema@nhl.nl)
+email: [martin.molema@nhl.nl](mailto:martin.molema@nhlstenden.com)
 
 ## Referenties:
 [WebStorm Debugger setup](https://www.jetbrains.com/help/webstorm/configuring-javascript-debugger.html)
