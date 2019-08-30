@@ -1,0 +1,13 @@
+div.container div {
+  float:left;
+}
+
+
+table.releases tr td {
+  cursor: pointer;
+  border-bottom: 1px solid lightgrey;
+}
+
+div.details {
+  border:1px solid lightgray;
+}
