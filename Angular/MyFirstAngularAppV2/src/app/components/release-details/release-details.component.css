@@ -1,0 +1,14 @@
+div.details {
+  margin:10px;
+  border:1px solid lightgrey;
+}
+
+app-image-list {
+  float:left;
+  max-width: 700px;
+  overflow-x:scroll;
+}
+
+app-image-details {
+  clear:both;
+}

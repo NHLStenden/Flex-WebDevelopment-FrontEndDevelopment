@@ -1,0 +1,53 @@
+<form #searchComponent="ngForm">
+  <label for="band">Van welke band wil je releases zien?</label>
+  <input id="band" type="text" [(ngModel)]="band" name="band"/>
+  <button type="submit" (click)="searchBand($event)">Zoeken</button>
+</form>
+
+<hr>
+<div class="container" *ngIf="releaseInfo$">
+  <div>
+    <table class="releases">
+      <thead>
+      <th>Release</th>
+      <th>Date</th>
+      <th>Country</th>
+      <th>Tracks</th>
+      </thead>
+      <tbody>
+      <tr
+        *ngFor="let release of releases$ | async"
+        (click)="selectRelease($event, release)">
+        <td>{{release.title}}</td>
+        <td>{{release.date}}</td>
+        <td>{{release.country}}</td>
+        <td>{{release['track-count']}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="details" *ngIf="selectedRelease">
+    <table>
+      <tr>
+        <td class="label">Date:</td>
+        <td class="value">{{selectedRelease.date}}</td>
+      </tr>
+      <tr>
+        <td class="label">Country:</td>
+        <td class="value">{{selectedRelease.country}}</td>
+      </tr>
+      <tr *ngIf="selectedRelease.media">
+        <td class="label">Media:</td>
+        <td class="value"><span *ngFor="let media of selectedRelease.media">{{media.format}} ( {{media["disc-count"]}}
+          discs, {{media["track-count"]}} tracks)<br/>
+    </span></td>
+      </tr>
+    </table>
+
+  </div>
+  <div class="images">
+    <div *ngFor="let image of images$ | async" ><img src="{{image.thumbnails.large}}" (click)="selectImage($event, image)"></div>
+  </div>
+
+  <div *ngIf="selectedImage" class="largeimage"><img src="{{selectedImage.image}}"></div>
+</div>
