@@ -1,5 +1,5 @@
 div.container div {
-  float:left;
+  float: left;
 }
 
 
@@ -9,5 +9,21 @@ table.releases tr td {
 }
 
 div.details {
-  border:1px solid lightgray;
+  border: 1px solid lightgray;
+}
+
+div.images {
+  float: left;
+}
+
+div.images img {
+  max-width: 256px;
+}
+
+div.largeimage {
+  clear:both;
+}
+
+div.largeimage img {
+  max-height: 500px;
 }

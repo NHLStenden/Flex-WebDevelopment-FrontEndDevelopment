@@ -1,0 +1,9 @@
+<form #searchComponent="ngForm">
+  <label for="band">Van welke band wil je releases zien?</label>
+  <input id="band" type="text" [(ngModel)]="band" name="band"/>
+  <button type="submit" (click)="searchBand($event)">Zoeken</button>
+</form>
+
+<hr>
+
+<app-release-list [releases$]="releases$"></app-release-list>

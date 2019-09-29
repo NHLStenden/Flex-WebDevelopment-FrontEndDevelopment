@@ -46,7 +46,8 @@
 
   </div>
   <div class="images">
-    <p *ngFor="let image of images | async">{{image.image}}</p>
-
+    <div *ngFor="let image of images$ | async" ><img src="{{image.thumbnails.large}}" (click)="selectImage($event, image)"></div>
   </div>
+
+  <div *ngIf="selectedImage" class="largeimage"><img src="{{selectedImage.image}}"></div>
 </div>
