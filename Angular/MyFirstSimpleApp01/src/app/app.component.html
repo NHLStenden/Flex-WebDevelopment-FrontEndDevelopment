@@ -1,0 +1,41 @@
+<div>
+  <span>Resultaat + Invoer</span>
+  <p>{{operator}} {{result}}</p>
+</div>
+<table class="calculator">
+  <tr>
+    <td class="calculatorcell digit" (click)="AddDigit('1')">1</td>
+    <td class="calculatorcell digit" (click)="AddDigit('2')">2</td>
+    <td class="calculatorcell digit" (click)="AddDigit('3')">3</td>
+  </tr>
+  <tr>
+    <td class="calculatorcell digit" (click)="AddDigit('4')">4</td>
+    <td class="calculatorcell digit" (click)="AddDigit('5')">5</td>
+    <td class="calculatorcell digit" (click)="AddDigit('6')">6</td>
+  </tr>
+  <tr>
+    <td class="calculatorcell digit" (click)="AddDigit('7')">7</td>
+    <td class="calculatorcell digit" (click)="AddDigit('8')">8</td>
+    <td class="calculatorcell digit" (click)="AddDigit('9')">9</td>
+  </tr>
+  <tr>
+    <td class="calculatorcell digit" (click)="AddDigit('.')">.</td>
+    <td colspan="2"
+        class="calculatorcell digit" (click)="AddDigit('0')">0</td>
+  </tr>
+  <tr>
+    <td class="calculatorcell operator" (click)="AddOperation('*')">*</td>
+    <td class="calculatorcell operator" (click)="AddOperation('+')">+</td>
+    <td class="calculatorcell operator" (click)="AddOperation('-')">-</td>
+
+  </tr>
+  <tr>
+    <td class="calculatorcell operator" (click)="AddOperation('/')">/</td>
+    <td class="calculatorcell backspace" (click)="Backspace()">&lt;&lt;</td>
+    <td class="calculatorcell result" (click)="CalculateResult()">=</td>
+
+  </tr>
+</table>
+<div class="history">
+  <p *ngFor="let item of history" class="item" (click)="replaceFromHistory(item)">{{item}}</p>
+</div>
