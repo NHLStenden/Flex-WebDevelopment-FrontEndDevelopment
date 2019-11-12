@@ -2,26 +2,48 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.8.
 
-## Development server
+## Material Design
+Gebruik maken van Material Design via de Terminal:
+```shell script
+$ ng add @angular/material
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Beantwoord de vragen:
+* `Choose a prebuilt theme name, or "custom" for a custom theme` :: kies een thema
+* `Set up HammerJS for gesture recognition` :: kies Yes
+* `Set up browser animations for Angular Material` :: kies Yes
 
-## Code scaffolding
+## Setup van je project
+* Run `ng serve` of gebruik je IDE (Bijv. Jetbrains WebStorm ziet dat het een Angular project is).
+* Verwijder de inhoud van het bestand `src/app/app.component.html`
+* Start met bouwen
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Bekijk je site op [http://localhost:4200](http://localhost:4200).
 
-## Build
+## Aanpassingen
+Als je WebStorm gebruikt kun je imports eenvoudig laten toevoegen. Gebruik in het geval dat je Angular/Material gebruikt
+altijd de juiste import:
+* MatFormFieldModule
+* MatSelectModule
+* MatInputModule
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Deze imports voeg je toe aan de `app.module.ts`. Deze ziet er dan als volgt uit:
+```typescript
+@NgModule({
+  declarations: [
+    AppComponent,
+    DataEntry01Component
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+```
+* Zet het thema in je `src/styles.css`:
+    @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
