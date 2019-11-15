@@ -12,10 +12,9 @@ functies of variabelen mogen door anderen gebruikt worden?
 Als je iets uit een andere module wilt importeren, dan noteer je dat als volgt:
 
 ```javascript
-import { MyHttp } from "./classes/MyHttpClass.js";
+import { MyHttp } from MyHttp.js;
 ```
-
-We kijken nog even naar de vorm van de `<head>` in de HTML-file:
+Kijk nog even naar de vorm van de `<head>` in de HTML-file:
 ```html
     <meta charset="UTF-8">
     <title>Opdracht 20</title>
@@ -98,4 +97,3 @@ function fillTableFromTemplate(idTable, idTemplate, arrData){
   * [MDN: JS Export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
   * [MDN: JS Import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
   * [MDN: Tree Shaking](https://developer.mozilla.org/en-US/docs/Glossary/Tree_shaking)
-  
