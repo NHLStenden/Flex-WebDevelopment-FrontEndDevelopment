@@ -1,5 +1,9 @@
+/**
+ * @module MyHttp
+ */
+
 export class MyHttp {
-    getDataFromIMDB(url){
+    getDataFromURL(url){
         console.log(">>getDataFromURL");
 
         // create a promise that will be returned as the function's result

@@ -19,11 +19,11 @@ Maak gebruik van onderstaande `<body>`
 
 
 Schrijf een functie die de click-events van de body afvangt en de volgende zaken rapporteert:
-  * het pad naar het aangeklikte element (bijv. Body->OL#mijnlijstje->LI[3]
-  * de naam van het element (P, LI, BODY etc)
-  * de textinhoud van het aangeklikte element
+  1. het pad naar het aangeklikte element (bijv. Body->OL#mijnlijstje->LI[3]
+  1. de naam van het element (P, LI, BODY etc)
+  1. de textinhoud van het aangeklikte element
   
-Gebruik voor de eerste bullit een recursieve functie! Maak twee varianten:
+Gebruik voor de eerste subopdracht een recursieve functie! Maak twee varianten:
   * de eerste begint bij de body en daalt af in de structuur
   * de tweede begint bij het aangeklikte element en gaat omhoog in de structuur
 

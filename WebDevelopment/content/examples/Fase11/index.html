@@ -2,20 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mijn eerste JQuery Front-End met REST API gegevens</title>
+    <title>Mijn eerste Open Streetmap met REST API gegevens</title>
+
+    <!--
+      Klassieke manier van javascript bestanden ophalen. https://leafletjs.com/
+    -->
     <script src="jquery/jquery.min.js"></script>
+    <!--
+      We maken gebruik van Leaflet om OpenStreetMap (OSM) weer te geven.
+      Bij het zetten van markers gebruiken we de MarkerCluster bibliotheek om ze te kunnen clusteren
+      (https://github.com/Leaflet/Leaflet.markercluster)
+    -->
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet.markercluster.js"></script>
 
     <!--
     Let op hoe de onderstaande js-files niet geladen worden met type 'javascript' maar met type 'module'.
-    het laden van het script "js/MyHttpClass.js" gebeurt door de module "js/index01.js"
+    het laden van het script "js/MyHttp.js" gebeurt door de module "js/index01.js"
     -->
     <script src="js/index.js" type="module"></script>
 
+    <!-- verplichte links naar de CSS-bestanden -->
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap/bootstrap-grid.min.css">
     <link rel="stylesheet" href="bootstrap/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/cover.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/leaflet.css">
+    <link rel="stylesheet" href="css/MarkerCluster.css">
+    <link rel="stylesheet" href="css/MarkerCluster.Default.css">
 
 </head>
 <body>
@@ -24,9 +39,9 @@
 <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-auto">
         <div class="inner">
-            <h3 class="masthead-brand">Cover</h3>
+            <h3 class="masthead-brand">Fietsenstallingen</h3>
             <nav class="nav nav-masthead justify-content-center">
-                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link active" href="#">Kaart</a>
                 <a class="nav-link" href="#">Features</a>
                 <a class="nav-link" href="#">Contact</a>
             </nav>
@@ -34,13 +49,10 @@
     </header>
 
     <main role="main" class="inner cover">
-        <h1 class="cover-heading" id="person_name" ></h1>
-        <p class="lead" id="person_sexe"></p>
-        <p class="lead" id="person_beroep"></p>
 
-        <p class="lead" id="imdb_url">
-            <a href="http://www.molema.org/stamboom/id=1" class="btn btn-lg btn-secondary">Learn more</a>
-        </p>
+        <!-- hier wordt de kaart daadwerkelijk weergegeven. Zie index.css voor opties voor de omvang -->
+        <div id="osm" ></div>
+
     </main>
 
     <footer class="mastfoot mt-auto">

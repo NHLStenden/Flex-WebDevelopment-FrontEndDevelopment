@@ -1,5 +1,5 @@
 # Opdracht 07 - DOM & Click events - Event Bubbling
-In de vorige opdracht hebben we een event-handler gebouwd voor elk `<LI>`-item. Stel dat we ook voor de onderliggende
+In de vorige opdracht hebben we een event-handler gebouwd voor elk `<LI>`-item. Stel dat we ook voor de bovenliggende
 pagina (`<body>`) een click-handler bouwen. Wat gebeurt er dan?
 
 Gebruik de oplossing van opdracht 06 en voeg een eventhandler toe voor de `<body>`. Geef weer een alert

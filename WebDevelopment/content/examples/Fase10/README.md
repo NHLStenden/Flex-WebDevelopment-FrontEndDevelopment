@@ -1,3 +1,1 @@
-# ToDo
-
-bla bla bla
+# Asynchrone HTTP-call voor ophalen van informatie
