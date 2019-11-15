@@ -13,8 +13,10 @@ export class MyOSMMap {
     _container = null;
 
     /**
+     * This constructor draws the basic map.
      * @constructor
-     * @param items
+     * @param {Array} items - a list of parking items containing descriptions and coordinates
+     * @param {String} idContainer - the HTML-id of an element that will hold the map.
      */
     constructor (items, idContainer){
         this.markerList = [];
@@ -34,19 +36,20 @@ export class MyOSMMap {
     }
 
     /**
-     *
-     * @param idContainer
-     * @param items
+     * This function will create the markers on the map using the list of items that was given to the constructor.
      */
 
-    CreateOpenStreetMap(idContainer) {
+    AddMarkersToMap() {
 
+        // clear previous list
         this.markerCluster.clearLayers();
         this.markerList = [];
 
+        // cycle through the list of items
         for (var i in this._items) {
             var item = this._items[i].parkeerlocatie;
 
+            // parse the current item.
             var coordinates = JSON.parse(item.Locatie).coordinates;
             var info = {};
 
@@ -55,6 +58,8 @@ export class MyOSMMap {
             info.postcode = item.postcode;
             info.opmerkingen = item.opmerkingen;
 
+            // add marker and add it to the list. this list is later used to determine the bounding box
+            // so all markers are visible.
              var marker = this.AddGeocodedLocation(info, coordinates);
              this.markerList.push(marker);
         }
@@ -67,22 +72,22 @@ export class MyOSMMap {
             if (m !== null) bounds.extend(m._latlng);
         }
         this.mymap.fitBounds(bounds);
-    }
+    }//AddMarkersToMap
 
     /**
-     *
-     * @param info
-     * @param coordinates
-     * @returns {*}
-     * @constructor
+     * This will add a new marker to the map. It will be added to the collection of markers so a cluster can be created
+     * @param {Object} info - an object containing more info on the location
+     * @param  {Array} coordinates - an array containing LAT + LNG : coordinates[0] = Longitude, coordinates[1]=Latitude
+     * @returns {Marker} a Leaflet marker object
      */
     AddGeocodedLocation(info, coordinates) {
         var lat, lng;
-        lat = coordinates[0];
-        lng = coordinates[1];
+        lng = coordinates[0];
+        lat = coordinates[1];
 
         var marker = null;
-        var plotll = new L.LatLng(parseFloat(lng), parseFloat(lat), true);
+        var plotll = new L.LatLng(parseFloat(lat), parseFloat(lng), true);
+
         var msg = "<div class='popup'><H1>" + info.caption + "</H1>";
         msg += "<P>Adres:" + info.adres + "</p>";
         msg += "<P>Postcode:" + info.postcode + "</p>";
@@ -95,8 +100,11 @@ export class MyOSMMap {
             title: info.caption
         });
 
+        // create a marker using Leaflet (L-object = leaflet)
         marker = L.marker(plotll, {icon: myIcon});
         this.markerCluster.addLayer(marker);
+
+        // when clicked, the popup is shown.
         marker.bindPopup(msg).openPopup();
 
         return marker;

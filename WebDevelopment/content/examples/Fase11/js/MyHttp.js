@@ -1,8 +1,28 @@
 /**
  * @module MyHttp
+ * @author MArtin Molema
  */
 
+/**
+ * @class MyHttp
+ * A class to request information from the internet using a HTTP-call and a Promise.
+ */
 export class MyHttp {
+
+    /**
+     * An empty constructor
+     * @constructor
+     */
+    constructor (){
+
+    }
+
+    /**
+     * This function will get the data through the URL using a Promise. No assumptions on the type of data
+     * returned are made
+     * @param {String} url - The URL that will return the data
+     * @returns {Promise<unknown>} a Promise object that can be handled using the Promise Resolve (.then) function
+     */
     getDataFromURL(url){
         console.log(">>getDataFromURL");
 

@@ -1,21 +1,21 @@
 "use strict";
+/**
+ * Module included by index.html
+ * @Author: Martin Molema
+ */
 
-import { MyHttp } from "./MyHttpClass.js";
+import { MyHttp } from "./MyHttp.js";
+import { MyOSMMap } from './MyOSMMap.js';
 
 $(document).ready(initPage);
 
-function SetupViewUsingIMDBData(data){
-    console.log(">>SetupViewUsingIMDBData");
-    console.log(data.data[0]);
+function CreateOSMView(data){
+    console.log(">>CreateOSMView");
+    let mymap = new MyOSMMap(data.parkeerlocaties, "osm");
 
-    // the api returns data in two parts: metadata and data. the data-field contains the records.
-    var person = data.data[0];
+    mymap.AddMarkersToMap();
 
-    $("#person_name").text(person.roepnaam + " " + person.familieNaam);
-    $("#person_sexe").text(person.geslacht);
-    $("#person_beroep").text(person.beroep);
-
-    console.log("<<SetupViewUsingIMDBData");
+    console.log("<<CreateOSMView");
 }//SetupViewUsingIMDBData()
 
 function initPage(){
@@ -23,7 +23,7 @@ function initPage(){
     var http = new MyHttp();
 
     // get the promise from the newly created http-class
-    var prom = http.getDataFromIMDB('http://restapi.local/api/v1/stamboom/personen/1?apikey=1234');
+    var prom = http.getDataFromURL('https://open.data.amsterdam.nl/ivv/parkeren/locaties.json');
 
     // now setup the resolve and reject functions (using fat-arrow notation)
     // first parameter of the THEN()-function is the RESOLVE
@@ -31,10 +31,10 @@ function initPage(){
     prom.then(
         strJSON => {
             console.log("Data received: ");
-            console.log(strJSON);
             var objData = JSON.parse(strJSON);
 
-            SetupViewUsingIMDBData(objData);
+            // draw the maps
+            CreateOSMView(objData);
         },
         error => {
             console.log(error)

@@ -1,3 +1,23 @@
-#imdb_poster {
-    max-height:200px;
+/**
+  Dit is de omvang van de getoonde kaart.
+ */
+#osm {
+    width:600px;
+    height: 400px;
+}
+
+/**
+ Pas de grootte van het H1-element aan binnen de popup
+ */
+div.popup h1 {
+    font-size:12px;
+    font-weight: bold;
+}
+
+/**
+ Zorg dat opvolgende P-elementen geen marges vertonen binnen de popup
+ */
+div.popup p+p {
+    margin-top:0px;
+    margin-bottom:0px;
 }
