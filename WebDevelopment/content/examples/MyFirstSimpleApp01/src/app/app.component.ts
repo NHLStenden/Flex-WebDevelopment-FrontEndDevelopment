@@ -9,21 +9,21 @@ import {convertToParamMap} from "@angular/router";
 export class AppComponent implements OnInit {
   title = 'Calculator';
 
-  result: string = "";
+  result: string = '';
   number1: number;
   number2: number;
   hasFirstNumber: boolean;
   operator: string;
-  history: Number[];
+  history: number[];
 
   ngOnInit(): void {
     this.hasFirstNumber = false;
-    this.result = "0";
+    this.result = '0';
     this.history = [];
   }
 
   public AddDigit(digit: string) {
-    if (Number(this.result) == 0) {
+    if (Number(this.result) === 0) {
       this.result = digit;
     } else {
       this.result = this.result + digit;
@@ -33,13 +33,12 @@ export class AppComponent implements OnInit {
 
   /**
    * Voegt een operator toe (plus, min, delen etc).
-   * @param operation
    */
   public AddOperation(operation: string) {
 
     this.number1 = Number(this.result);
 
-    this.result = "0";
+    this.result = '0';
     this.operator = operation;
 
     this.AddToHistory(this.number1);
@@ -89,17 +88,17 @@ export class AppComponent implements OnInit {
 
   }// CalculateResult()
 
-  AddToHistory(item: Number) {
+  AddToHistory(item: number) {
 
     this.history= [item, ...this.history];
   }
 
-  replaceFromHistory(item: string){
+  replaceFromHistory(item: number) {
     this.result = item.toString();
   }
 
   Backspace(){
     this.result = this.result.substr(0,this.result.length-1);
-    if (this.result  == "") this.result = "0";
+    if (this.result  === '') this.result = '0';
   }
 }
