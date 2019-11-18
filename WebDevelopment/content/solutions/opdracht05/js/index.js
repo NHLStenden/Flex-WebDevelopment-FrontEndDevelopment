@@ -28,11 +28,9 @@ function initPage(){
 
     var items = document.querySelectorAll("#mijnlijstje li");
     for(const item  of items){
-        item.addEventListener("click", clickHandler);
+        item.addEventListener("click", function(evt){
+            alert("ik ben aangeklikt.");
+        });
     }
 
 }//initPage()
-
-function clickHandler(evt){
-    alert("ik ben aangeklikt.")
-}//clickHandler()
