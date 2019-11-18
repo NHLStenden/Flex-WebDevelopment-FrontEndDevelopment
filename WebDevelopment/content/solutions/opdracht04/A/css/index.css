@@ -2,6 +2,6 @@ body {
     font-family: sans-serif;
 }
 
-#mijnlijstje {
+#mijnlijstje li {
     cursor: pointer;
 }
