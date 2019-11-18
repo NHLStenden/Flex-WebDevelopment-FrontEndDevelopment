@@ -5,7 +5,7 @@ afhandelen. Ditmaal doen we dat slimmer met een queryselecter achteraf, in plaat
 Gebruik de code uit oplossing 04b ([Oplossing 04](../../solutions/opdracht04)). Ditmaal veranderen we de
 code om de EventListener te koppelen. Haal onderstaande regel weg.
 ```javascript
-  mijnobject.addEventListener("click", function)
+  objListItem.addEventListener("click", clickHandler);
 ```
 Ken nu in één keer achteraf alle eventhandlers toe door middel van een `document.querySelectorAll()`
 in combinatie met een for-lus.
