@@ -1,1 +1,2 @@
-# Asynchrone HTTP-call voor ophalen van informatie
+# Bootstrap en asynchroon gegevens ophalen V1
+

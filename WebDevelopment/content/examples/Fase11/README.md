@@ -1,3 +1,1 @@
-# to do
-
-more bla bla bla
+# # Bootstrap en asynchroon gegevens ophalen V2
