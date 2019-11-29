@@ -1,14 +1,14 @@
-window.onload=initPage;
+window.onload = initPage;
 
-function resolveFunction(data){
+function resolveFunction(data) {
     console.log("resolved: " + data);
 }//resolveFunction
 
-function rejectFunction(errormessage){
+function rejectFunction(errormessage) {
     console.log("error:" + errormessage);
 }//rejectFunction
 
-function myPromiseHandler(resolve, reject){
+function myPromiseHandler(resolve, reject) {
     //function body
     console.log("Now in myPromiseHandler body ");
 
@@ -23,14 +23,19 @@ function myPromiseHandler(resolve, reject){
     console.log("Exiting myPromiseHandler body");
 }//myPromiseHandler
 
-function initPage(){
-  console.log("initPage()");
-  var myPromise = new Promise(myPromiseHandler);
+function initPage() {
+    console.log("initPage()");
+    var myPromise = new Promise(myPromiseHandler);
 
 
-  window.setTimeout(function(){console.log("klaar")},10000);
+    window.setTimeout(function () {
+        console.log("klaar")
+    }, 10000);
 
-  console.log("Promise aangemaakt");
-  // dit levert een foutmelding in geval van de **Reject**
+    console.log("Promise aangemaakt");
+    console.log(myPromise);
+
+    myPromise.then(resolveFunction, rejectFunction);
+
     console.log(myPromise);
 }//initPage
