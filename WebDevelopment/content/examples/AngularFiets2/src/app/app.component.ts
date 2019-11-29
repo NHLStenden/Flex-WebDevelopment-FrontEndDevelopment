@@ -19,12 +19,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    /*    const observable = this.http.get(this.url);
-
-        observable.subscribe(
-          data => this.parkeerlocaties = data.parkeerlocaties,
-          error => console.log('error!', error));
-  */
     this.parkeerlocaties$ = this.http.get(this.url);
   }
 
