@@ -1,0 +1,9 @@
+<ol class="locaties" *ngIf="(parkeerlocaties$ | async)">
+  <li *ngFor="let locatie of (parkeerlocaties$ | async).parkeerlocaties "
+  (click)="onClickParkeerlocatie(locatie.parkeerlocatie);"
+  >{{locatie.parkeerlocatie.title}}</li>
+</ol>
+<app-parkeer-locatie-details
+  *ngIf="geselecteerdeParkeerlocatie"
+  [locatie]="geselecteerdeParkeerlocatie"></app-parkeer-locatie-details>
+

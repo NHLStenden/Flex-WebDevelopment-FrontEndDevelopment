@@ -1,0 +1,14 @@
+ol li {
+  cursor: pointer;
+}
+
+ol.locaties {
+  max-width: 300px;
+  float:left;
+  max-height: 400px;
+  overflow-y:scroll;
+}
+
+div.details {
+  float:left;
+}
