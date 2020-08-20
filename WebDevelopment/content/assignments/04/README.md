@@ -21,6 +21,6 @@ zodat gebruikers snappen dat er iets te klikken valt.
 Lees voor meer informatie de onderstaande referenties
 
 ## Referenties
-  * [Voorbeeld 02](../../examples/Fase02/README.md)
+  * [Voorbeeld 02](../../examples/Javascript/Example02/README.md)
   * [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
   * [CSS Cursor](https://www.w3schools.com/cssref/pr_class_cursor.asp)

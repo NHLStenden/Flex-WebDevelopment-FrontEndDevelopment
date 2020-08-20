@@ -1,0 +1,6 @@
+<div class="images">
+  <div *ngFor="let image of images$ | async" class="oneimage">
+    <img src="{{image.thumbnails.large}}"
+         (click)="selectImage($event, image)">
+  </div>
+</div>

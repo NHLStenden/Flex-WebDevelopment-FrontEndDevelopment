@@ -15,5 +15,5 @@ aangeklikt. Verander de `alert`-functie en zorg dat de aangeklikte tekst gemeld 
 Gebruik voor een 2e oplossingsvariant zowel de informatie uit de variabele `evt` als `this`. 
 
 ## Referenties
-  * [Voorbeeld 02](../../examples/Fase02/README.md)
+  * [Voorbeeld 02](../../examples/Javascript/Example02/README.md)
   * [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)

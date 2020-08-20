@@ -20,4 +20,4 @@ De HTML waar je mee start heeft de volgende `<body>`:
 Zorg dat jouw lijstje via Javascript terecht komt in de "Ordered List" `<ol id="mijnlijstje">`.
 
 ## Referenties
-  * [Voorbeeld 02](../../examples/Fase02/README.md)
+  * [Voorbeeld 02](../../examples/Javascript/Example02/README.md)

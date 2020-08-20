@@ -1,0 +1,57 @@
+* {
+  font-family: sans-serif;
+}
+
+table.calculator {
+  width:300px;
+  border:5px solid gold;
+}
+
+.calculatorcell {
+  border:1px solid gray;
+  box-shadow: 2px 2px 3px #000;
+  width:20px;
+  height:20px;
+  background-color:lightgray;
+  vertical-align: center;
+  text-align: center;
+  padding:4px;
+  margin:4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.calculatorcell.digit:hover {
+  background-color:white;
+}
+
+.calculatorcell.operator {
+  background-color:#00AAAA;
+}
+
+.calculatorcell.backspace {
+  background-color:orangered;
+}
+
+.calculatorcell.result {
+  background-color:greenyellow;
+}
+
+.history {
+  border:1px solid black;
+  margin-left:20px;
+
+}
+
+.history P {
+  border:1px dotted lightgrey;
+  width:6em;
+  margin-top:0px;
+  margin-bottom:0px;
+  text-align: right;
+  cursor:pointer;
+}
+.history,
+table.calculator {
+  float:left;
+}

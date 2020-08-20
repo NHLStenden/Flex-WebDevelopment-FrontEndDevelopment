@@ -1,0 +1,6 @@
+img {
+  max-height: 400px;
+  margin:30px;
+  border: 10px gold inset;
+  padding:5px;
+}

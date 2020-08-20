@@ -1,0 +1,9 @@
+<div id="osmmap"
+ leaflet
+     [leafletOptions]="options"
+     [leafletBaseLayers]="baselayers"
+     [leafletMarkerCluster]="markerClusterData"
+     [leafletMarkerClusterOptions]="markerClusterOptions"
+>
+</div>
+<app-parkeerlocatie-details [parkeerlocatie]="selectedLocatie" ></app-parkeerlocatie-details>

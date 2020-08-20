@@ -1,0 +1,45 @@
+<div (window:keypress)="onKeypress($event)">
+  <div>
+    <span>Resultaat + Invoer</span>
+    <p>{{operator}} {{result}}</p>
+  </div>
+  <table class="calculator" (click)="onClickButton($event)">
+    <tr>
+      <td class="calculatorcell digit">1</td>
+      <td class="calculatorcell digit">2</td>
+      <td class="calculatorcell digit">3</td>
+    </tr>
+    <tr>
+      <td class="calculatorcell digit">4</td>
+      <td class="calculatorcell digit">5</td>
+      <td class="calculatorcell digit">6</td>
+    </tr>
+    <tr>
+      <td class="calculatorcell digit">7</td>
+      <td class="calculatorcell digit">8</td>
+      <td class="calculatorcell digit">9</td>
+    </tr>
+    <tr>
+      <td class="calculatorcell digit">.</td>
+      <td colspan="2"
+          class="calculatorcell digit">0
+      </td>
+    </tr>
+    <tr>
+      <td class="calculatorcell operator">*</td>
+      <td class="calculatorcell operator">+</td>
+      <td class="calculatorcell operator">-</td>
+
+    </tr>
+    <tr>
+      <td class="calculatorcell operator">/</td>
+      <td class="calculatorcell backspace">&lt;&lt;</td>
+      <td class="calculatorcell result">=</td>
+
+    </tr>
+  </table>
+  <div class="history">
+    <p *ngFor="let item of history" class="item" (click)="replaceFromHistory(item)">{{item}}</p>
+  </div>
+
+</div>

@@ -1,26 +1,31 @@
 import {MarkdownSupporter} from "./MarkdownSupporter.js";
 
 $( function() {
-    var examples = [
-        {dir:"Fase01", caption:"1. Javascript start"},
-        {dir:"Fase02", caption:"2. DOM"},
-        {dir:"Fase03", caption:"3. JQuery 1"},
-        {dir:"Fase04", caption:"4. JQuery 2"},
-        {dir:"Fase05", caption:"5. Asynchroon Promises"},
-        {dir:"Fase06", caption:"6. Promises 2"},
-        {dir:"Fase07", caption:"7. Boostrap"},
-        {dir:"Fase08", caption:"8. Animaties"},
-        {dir:"Fase09", caption:"9. JQuery UI"},
-        {dir:"Fase10", caption:"10. Async HTTP"},
-        {dir:"Fase11", caption:"11. OpenStreetMap"},
-        {dir:"MyFirstSimpleApp01", caption:"Angular 1"},
-        {dir:"MyFirstSimpleApp02", caption:"Angular 2"},
-        {dir:"MyFirstAngularApp", caption:"Angular 3"},
-        {dir:"MyFirstAngularAppV2", caption:"Angular 4"},
-        {dir:"MyFirstDataEntry", caption:"Angular Data Entry"},
+    const examples = [
+        {dir:"Javascript/Example01", caption:"1. Javascript start"},
+        {dir:"Javascript/Example02", caption:"2. DOM"},
+        {dir:"Javascript/Example03", caption:"3. JQuery 1"},
+        {dir:"Javascript/Example04", caption:"4. JQuery 2"},
+        {dir:"Javascript/Example05", caption:"5. Asynchroon Promises"},
+        {dir:"Javascript/Example06", caption:"6. Promises 2"},
+        {dir:"Javascript/Example07", caption:"7. Boostrap"},
+        {dir:"Javascript/Example08", caption:"8. Animaties"},
+        {dir:"Javascript/Example09", caption:"9. JQuery UI"},
+        {dir:"Javascript/Example10", caption:"10. Async HTTP"},
+        {dir:"Javascript/Example11", caption:"11. OpenStreetMap"},
+        {dir:"Angular/MyFirstSimpleApp01", caption:"Angular 1"},
+        {dir:"Angular/MyFirstSimpleApp02", caption:"Angular 2"},
+        {dir:"Angular/MyFirstAngularApp", caption:"Angular 3"},
+        {dir:"Angular/MyFirstAngularAppV2", caption:"Angular 4"},
+        {dir:"Angular/MyFirstDataEntry", caption:"Angular Data Entry"},
+
+        {dir:"Angular/AngularFiets1", caption:"Angular met fietsinfo"},
+        {dir:"Angular/AngularFiets2", caption:"Angular met fietsinfo 2"},
+        {dir:"Angular/AngularFiets3", caption:"Angular met fietsinfo 3"},
+        {dir:"Angular/AngularFietsMap", caption:"Angular met kaart"},
     ];
 
-    var mdSupporter = new MarkdownSupporter("content/examples");
+    const mdSupporter = new MarkdownSupporter("content/examples");
 
     mdSupporter.LoadMarkDownFiles(examples,    "examples");
 } ); // Ready Function

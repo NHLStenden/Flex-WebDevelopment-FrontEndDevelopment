@@ -14,7 +14,7 @@ onderaan de pagina krijg je een nette uitleg.
 
 Met event-bubbling regelt de browser dat elk element dat op elkaar gestapeld is in de DOM, het event 
 aangeboden krijgt. Wederom onderstaande afbeelding. 
-![DOM](../../examples/Fase02/doc/FrontEndDevelopment-DOM%202.png)
+![DOM](../../examples/Javascript/Example02/doc/FrontEndDevelopment-DOM%202.png)
 
 Stel dat één van de blauwe  `<li>`-elementen aangeklikt wordt met de muis. De volgende elementen
 krijgen dan allemaal het event aangeboden:
