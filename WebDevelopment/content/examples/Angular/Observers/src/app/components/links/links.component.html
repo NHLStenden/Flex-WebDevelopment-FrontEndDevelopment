@@ -1,0 +1,5 @@
+<p *ngFor="let student of studenten$ | async"
+   (click)="selecteerStudent(student)"
+>
+  {{student}}
+</p>
