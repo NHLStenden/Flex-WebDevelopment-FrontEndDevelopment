@@ -36,7 +36,7 @@ Bekijk onderstaande code eens:
 Pas bij het aanroepen van `xhr.send();`  wordt de URL daadwerkelijk opgevraagd. Dat kost even tijd, waardoor het bericht
 "thank you" eerder zal verschijnen in de console dan de tekst "URL information retrieved".
 
-##Opdracht
+## Opdracht
 Gebruik bovenstaande code om informatie over een film op te halen via onderstaande URL:
 ```text
 http://www.omdbapi.com/?i=tt3896198&apikey=89f91ba6
