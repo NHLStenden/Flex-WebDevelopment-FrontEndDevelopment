@@ -35,7 +35,13 @@ function initPage() {
     console.log("Promise aangemaakt");
     console.log(myPromise);
 
-    myPromise.then(resolveFunction, rejectFunction);
+    //myPromise.then(resolveFunction, rejectFunction);
+
+    myPromise.then(data => {
+        console.log( `Gelukt: ${data}`);
+    }, error => {
+        console.log( `Fout!: ${error}`);
+    });
 
     console.log(myPromise);
 }//initPage
