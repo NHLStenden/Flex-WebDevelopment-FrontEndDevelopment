@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   private url = 'https://open.data.amsterdam.nl/ivv/parkeren/locaties.json';
   public parkeerlocaties: Parkeerlocaties;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient) {  // http client wordt geinjecteerd door middel van Dependency Injection. (een design pattern)
 
   }
 

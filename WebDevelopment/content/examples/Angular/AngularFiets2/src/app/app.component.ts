@@ -11,8 +11,7 @@ export class AppComponent implements OnInit {
   title = 'Fietsenstallingen in Amsterdam';
 
   private url = 'https://open.data.amsterdam.nl/ivv/parkeren/locaties.json';
-  private parkeerlocaties: Array<any>;
-
+  
   public parkeerlocaties$: Observable<any>;
 
   constructor(private http: HttpClient) {

@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   }
 
   public onClickParkeerlocatie(parkeerlocatie: any) {
-    this.geselecteerdeParkeerlocatie = parkeerlocatie;
+    this.geselecteerdeParkeerlocatie = parkeerlocatie;  // Triggers CHange Detection
     // console.log(this.geselecteerdeParkeerlocatie);
   }
 }

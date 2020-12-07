@@ -1,5 +1,5 @@
-<ol >
+<ol *ngIf="parkeerlocaties">
   <li *ngFor="let locatie of parkeerlocaties"
-  (click)="showInfo(locatie.parkeerlocatie.adres);"
+      (click)="showInfo(locatie.parkeerlocatie.adres);"
   >{{locatie.parkeerlocatie.title}}</li>
 </ol>
