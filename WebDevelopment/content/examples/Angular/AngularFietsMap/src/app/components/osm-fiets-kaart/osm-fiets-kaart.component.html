@@ -6,4 +6,4 @@
      [leafletMarkerClusterOptions]="markerClusterOptions"
 >
 </div>
-<app-parkeerlocatie-details [parkeerlocatie]="selectedLocatie" ></app-parkeerlocatie-details>
+<app-parkeerlocatie-details *ngIf="selectedLocatie"  [parkeerlocatie]="selectedLocatie" ></app-parkeerlocatie-details>
