@@ -24,4 +24,6 @@ email: [martin.molema@nhl.nl](mailto:martin.molema@nhlstenden.com)
 
 
 ## Tutorials
-* [O'Reilly Angular](https://www.oreilly.com/library/view/angular-the/9781788998437/)
+* [O'Reilly Angular](https://www.oreilly.com/library/view/angular-the/9781788998437/) Inloggen via de mediatheek! [Mediatheek](https://bibliotheek.nhlstenden.com/informatiebronnen/e-books/), dan kiezen voor *Safari: O'Reilly's Learning Platform for Higher Education* en inloggen met je school account.
+* [Google Heros App](https://angular.io/tutorial)
+* [Angular Material Design Tutorial](https://material.angular.io/guide/getting-started)
