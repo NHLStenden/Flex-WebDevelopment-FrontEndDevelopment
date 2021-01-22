@@ -20,4 +20,8 @@ Martin Molema
 email: [martin.molema@nhl.nl](mailto:martin.molema@nhlstenden.com)
 
 ## Referenties:
-[WebStorm Debugger setup](https://www.jetbrains.com/help/webstorm/configuring-javascript-debugger.html)
+* [WebStorm Debugger setup](https://www.jetbrains.com/help/webstorm/configuring-javascript-debugger.html)
+
+
+## Tutorials
+* [O'Reilly Angular](https://www.oreilly.com/library/view/angular-the/9781788998437/)
