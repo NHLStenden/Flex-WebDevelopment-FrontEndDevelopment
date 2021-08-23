@@ -1,0 +1,54 @@
+/*
+Stroking colors
+ */
+.shape.red {
+    stroke: red;
+}
+
+.shape.green {
+    stroke: green;
+}
+
+.shape.violet {
+    stroke: blueviolet;
+}
+
+/*
+ Striped fills
+ */
+
+.shape.striped.red {
+    fill: url(#stripes-red);
+}
+
+.shape.striped.violet {
+    fill: url(#stripes-purple);
+}
+
+.shape.striped.green {
+    fill: url(#stripes-green);
+}
+
+/*
+ Solid fills
+ */
+
+.shape.solid.red {
+    fill: red;
+}
+
+.shape.solid.violet {
+    fill: blueviolet;
+}
+
+.shape.solid.green {
+    fill: green;
+}
+
+/*
+ No Fills (hollow)
+ */
+
+.shape.hollow {
+    fill: none;
+}
