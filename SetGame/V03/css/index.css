@@ -17,8 +17,14 @@ body {
     width: calc(100%);
 }
 
-#shapes div {
+#shapes div.card {
     float:left;
+    cursor: pointer;
+    box-shadow: 4px 4px 4px darkgray;
+}
+
+#shapes div.card:hover {
+    box-shadow: 4px 4px 4px darkgreen;
 }
 
 #shapes br {

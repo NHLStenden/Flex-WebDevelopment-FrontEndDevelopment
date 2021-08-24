@@ -1,7 +1,7 @@
 /*
 Stroking colors
  */
-.shape.violet { stroke: blueviolet; }
+.shape.violet { stroke: violet; }
 .shape.red    { stroke: red; }
 .shape.green  { stroke: green; }
 
@@ -26,5 +26,5 @@ Stroking colors
  */
 
 .shape.hollow {
-    fill: none;
+    fill: white;
 }

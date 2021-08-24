@@ -83,9 +83,21 @@ window.onload = () => {
     const cardsOnTable = document.querySelectorAll("div.card");
     console.log(cardsOnTable.length);
     for (const card of cardsOnTable){
-        card.addEventListener('click' , (evt) => {
-            console.log(`Clicked on a card! ${card.id}`);
-            card.classList.toggle('selected');
+        card.addEventListener('click' , function(evt) {
+            const clickedCard         = this;
+            const selectedCardClasses = clickedCard.classList;
+
+            if (selectedCardClasses.contains('selected')) {
+                card.classList.remove('selected');
+            }
+            else{
+                const cardsSelected = document.querySelectorAll('div.card.selected');
+                if (cardsSelected.length < 3 ) {
+                    console.log(`Clicked on a card! ${card.id}`);
+                    card.classList.toggle('selected');
+                }
+
+            }
         });
     }
 

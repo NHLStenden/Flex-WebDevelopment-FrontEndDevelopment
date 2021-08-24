@@ -27,7 +27,7 @@ function GetFullSet() {
                         shapes += shapeTemplate;
 
                     }// for items on card
-                    const cardTemplate = `<div id="${items.length+1}" class="card">${shapes}</div>`;
+                    const cardTemplate = `<div id="${items.length+1}" class="card ${shape}">${shapes}</div>`;
                     items.push({
                         id: items.length + 1,
                         shape,
@@ -55,8 +55,6 @@ function GetRandomItems(list, nrOfItemsToTake) {
     for (let i = 0; i < nrOfItemsToTake; i++) {
         // get a new random number that is maximum the length of the list
         const pos = Math.floor( Math.random() * copyOfList.length );
-        console.log(pos);
-
         // remove the item at random position from the list. the spliced-off items are returned as a new array
         const item = copyOfList.splice(pos,1);
 
@@ -72,7 +70,6 @@ window.onload = () => {
 
     const cardset = GetFullSet();
     const randomCards = GetRandomItems(cardset, 12);
-    console.log(randomCards);
 
     let i=1;
     for (const card of randomCards) {
@@ -82,4 +79,14 @@ window.onload = () => {
         }
         i++;
     }
+
+    const cardsOnTable = document.querySelectorAll("div.card");
+    console.log(cardsOnTable.length);
+    for (const card of cardsOnTable){
+        card.addEventListener('click' , (evt) => {
+            console.log(`Clicked on a card! ${card.id}`);
+            card.classList.toggle('selected');
+        });
+    }
+
 }
