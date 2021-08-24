@@ -41,6 +41,4 @@ window.onload = () => {
     }
 
     console.log(JSON.stringify(items));
-
-
 }
