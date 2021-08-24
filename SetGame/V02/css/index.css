@@ -1,0 +1,46 @@
+body {
+    box-sizing: border-box;
+}
+
+#shapes {
+    /*
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 90vw;
+    justify-content: flex-start;
+    align-content: center;
+    */
+
+    background-color: lightgray;
+    height: calc(100%);
+    width: calc(100%);
+}
+
+#shapes div {
+    float:left;
+}
+
+#shapes br {
+    clear:both;
+}
+
+#shapes div.card {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    height:300px;
+    width:150px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 10px;
+
+}
+
+div.card svg {
+    height: 100px;
+    width: 140px;
+}
