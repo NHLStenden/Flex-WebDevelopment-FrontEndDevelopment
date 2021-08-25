@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Set Game - Versie 6</title>
+    <title>Set Game - Versie 7</title>
     <script src="js/index.js" type="module"></script>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/svg-colors.css">
@@ -19,8 +19,8 @@
             <line x1="0" x2="0" y1="0" y2="110" stroke="red" stroke-width="6"/>
             <line x1="6" x2="6" y1="0" y2="110" stroke="white" stroke-width="6"/>
         </pattern>
-        <pattern id="stripes-violet" x="0" y="0" width="4%" height="100%">
-            <line x1="0" x2="0" y1="0" y2="110" stroke="violet" stroke-width="6"/>
+        <pattern id="stripes-purple" x="0" y="0" width="4%" height="100%">
+            <line x1="0" x2="0" y1="0" y2="110" stroke="purple" stroke-width="6"/>
             <line x1="6" x2="6" y1="0" y2="110" stroke="white" stroke-width="6"/>
         </pattern>
         <pattern id="stripes-green" x="0" y="0" width="4%" height="100%">
@@ -39,6 +39,43 @@
              "/>
     </defs>
 </svg>
-  <div id="shapes"></div>
+<div class="container">
+    <div id="shapes"></div>
+    <div class="selectionInfo">
+        <table>
+            <thead>
+              <th>Item</th>
+              <th>Diff</th>
+              <th>Same</th>
+            </thead>
+            <tbody>
+            <tr class="fills">
+                <td>Fills:</td>
+                <td class="indicator"></td>
+                <td class="indicator"></td>
+            </tr>
+            <tr class="colors">
+                <td>Colors:</td>
+                <td class="indicator"></td>
+                <td class="indicator"></td>
+            </tr>
+            <tr class="shapes">
+                <td>Shapes:</td>
+                <td class="indicator"></td>
+                <td class="indicator"></td>
+            </tr>
+            <tr class="nrOfshapes">
+                <td># shapes</td>
+                <td class="indicator"></td>
+                <td class="indicator"></td>
+            </tr>
+            </tbody>
+            <tfoot>
+
+            </tfoot>
+        </table>
+    </div>
+
+</div>
 </body>
 </html>

@@ -1,0 +1,974 @@
+[
+  {
+    "shape": "diamond",
+    "fill": "solid",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "solid",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "solid",
+    "color": "red",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "diamond",
+    "fill": "solid",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "solid",
+    "color": "red",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "diamond",
+    "fill": "solid",
+    "color": "red",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "pill",
+    "fill": "solid",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "solid",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "solid",
+    "color": "red",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "pill",
+    "fill": "solid",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "solid",
+    "color": "red",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "pill",
+    "fill": "solid",
+    "color": "red",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "wave",
+    "fill": "solid",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "solid",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "solid",
+    "color": "red",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "wave",
+    "fill": "solid",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "solid",
+    "color": "red",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "wave",
+    "fill": "solid",
+    "color": "red",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "diamond",
+    "fill": "hollow",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "hollow",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "hollow",
+    "color": "red",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "diamond",
+    "fill": "hollow",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "hollow",
+    "color": "red",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "diamond",
+    "fill": "hollow",
+    "color": "red",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "pill",
+    "fill": "hollow",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "hollow",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "hollow",
+    "color": "red",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "pill",
+    "fill": "hollow",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "hollow",
+    "color": "red",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "pill",
+    "fill": "hollow",
+    "color": "red",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "wave",
+    "fill": "hollow",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "hollow",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "hollow",
+    "color": "red",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "wave",
+    "fill": "hollow",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "hollow",
+    "color": "red",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "wave",
+    "fill": "hollow",
+    "color": "red",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "diamond",
+    "fill": "striped",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "striped",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "striped",
+    "color": "red",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "diamond",
+    "fill": "striped",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "striped",
+    "color": "red",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "diamond",
+    "fill": "striped",
+    "color": "red",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "pill",
+    "fill": "striped",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "striped",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "striped",
+    "color": "red",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "pill",
+    "fill": "striped",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "striped",
+    "color": "red",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "pill",
+    "fill": "striped",
+    "color": "red",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "wave",
+    "fill": "striped",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "striped",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "striped",
+    "color": "red",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "wave",
+    "fill": "striped",
+    "color": "red",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "striped",
+    "color": "red",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "wave",
+    "fill": "striped",
+    "color": "red",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "diamond",
+    "fill": "solid",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "solid",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "solid",
+    "color": "green",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "diamond",
+    "fill": "solid",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "solid",
+    "color": "green",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "diamond",
+    "fill": "solid",
+    "color": "green",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "pill",
+    "fill": "solid",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "solid",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "solid",
+    "color": "green",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "pill",
+    "fill": "solid",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "solid",
+    "color": "green",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "pill",
+    "fill": "solid",
+    "color": "green",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "wave",
+    "fill": "solid",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "solid",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "solid",
+    "color": "green",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "wave",
+    "fill": "solid",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "solid",
+    "color": "green",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "wave",
+    "fill": "solid",
+    "color": "green",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "diamond",
+    "fill": "hollow",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "hollow",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "hollow",
+    "color": "green",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "diamond",
+    "fill": "hollow",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "hollow",
+    "color": "green",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "diamond",
+    "fill": "hollow",
+    "color": "green",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "pill",
+    "fill": "hollow",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "hollow",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "hollow",
+    "color": "green",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "pill",
+    "fill": "hollow",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "hollow",
+    "color": "green",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "pill",
+    "fill": "hollow",
+    "color": "green",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "wave",
+    "fill": "hollow",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "hollow",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "hollow",
+    "color": "green",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "wave",
+    "fill": "hollow",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "hollow",
+    "color": "green",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "wave",
+    "fill": "hollow",
+    "color": "green",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "diamond",
+    "fill": "striped",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "striped",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "striped",
+    "color": "green",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "diamond",
+    "fill": "striped",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "striped",
+    "color": "green",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "diamond",
+    "fill": "striped",
+    "color": "green",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "pill",
+    "fill": "striped",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "striped",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "striped",
+    "color": "green",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "pill",
+    "fill": "striped",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "striped",
+    "color": "green",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "pill",
+    "fill": "striped",
+    "color": "green",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "wave",
+    "fill": "striped",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "striped",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "striped",
+    "color": "green",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "wave",
+    "fill": "striped",
+    "color": "green",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "striped",
+    "color": "green",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "wave",
+    "fill": "striped",
+    "color": "green",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "diamond",
+    "fill": "solid",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "solid",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "solid",
+    "color": "violet",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "diamond",
+    "fill": "solid",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "solid",
+    "color": "violet",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "diamond",
+    "fill": "solid",
+    "color": "violet",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "pill",
+    "fill": "solid",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "solid",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "solid",
+    "color": "violet",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "pill",
+    "fill": "solid",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "solid",
+    "color": "violet",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "pill",
+    "fill": "solid",
+    "color": "violet",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "wave",
+    "fill": "solid",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "solid",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "solid",
+    "color": "violet",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "wave",
+    "fill": "solid",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "solid",
+    "color": "violet",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "wave",
+    "fill": "solid",
+    "color": "violet",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "diamond",
+    "fill": "hollow",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "hollow",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "hollow",
+    "color": "violet",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "diamond",
+    "fill": "hollow",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "hollow",
+    "color": "violet",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "diamond",
+    "fill": "hollow",
+    "color": "violet",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "pill",
+    "fill": "hollow",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "hollow",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "hollow",
+    "color": "violet",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "pill",
+    "fill": "hollow",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "hollow",
+    "color": "violet",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "pill",
+    "fill": "hollow",
+    "color": "violet",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "wave",
+    "fill": "hollow",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "hollow",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "hollow",
+    "color": "violet",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "wave",
+    "fill": "hollow",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "hollow",
+    "color": "violet",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "wave",
+    "fill": "hollow",
+    "color": "violet",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "diamond",
+    "fill": "striped",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "striped",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "striped",
+    "color": "violet",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "diamond",
+    "fill": "striped",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "diamond",
+    "fill": "striped",
+    "color": "violet",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "diamond",
+    "fill": "striped",
+    "color": "violet",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "pill",
+    "fill": "striped",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "striped",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "striped",
+    "color": "violet",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "pill",
+    "fill": "striped",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "pill",
+    "fill": "striped",
+    "color": "violet",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "pill",
+    "fill": "striped",
+    "color": "violet",
+    "nrOfShapes": 3
+  },
+  {
+    "shape": "wave",
+    "fill": "striped",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "striped",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "striped",
+    "color": "violet",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "wave",
+    "fill": "striped",
+    "color": "violet",
+    "nrOfShapes": 1
+  },
+  {
+    "shape": "wave",
+    "fill": "striped",
+    "color": "violet",
+    "nrOfShapes": 2
+  },
+  {
+    "shape": "wave",
+    "fill": "striped",
+    "color": "violet",
+    "nrOfShapes": 3
+  }
+]
