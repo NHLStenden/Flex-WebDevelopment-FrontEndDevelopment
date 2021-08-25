@@ -5,10 +5,8 @@ Stroking colors
 .shape.red    { stroke: red; }
 .shape.green  { stroke: green; }
 
-/*
-Stroke width
- */
-.shape svg {
+svg .shape ,
+svg .shape {
     stroke-width: 3;
 }
 
