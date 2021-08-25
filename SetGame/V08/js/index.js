@@ -5,15 +5,37 @@ const fills = ["solid", "hollow", "striped"];
 const shapes = ["diamond", "pill", "wave"]
 const nrOfShapes = [1, 2, 3];
 let fullSetOfCards ;
-let randomCards;
+let cardsOnTheBoard;
+let hintsUsed = 0 ;
+let nrOfAttempts = 0 ;
 
 window.onload = () => {
     setup();
-    findAllSets(randomCards);
+    findAllSets(cardsOnTheBoard);
 }
 
+function showCardsLeftInFullSet(){
+    const div = document.getElementById("cardsleft");
+    if (div) {
+        div.innerHTML = `Cards left: <span>${fullSetOfCards.length}</span>`;
+    }
+}
 
-function GetFullSet() {
+function showHintsUsed() {
+    const div = document.getElementById("hintsused");
+    if (div) {
+        div.innerHTML = `Hints used:<span>${hintsUsed}</span>`;
+    }
+}
+
+function showNrOfTurns() {
+    const div = document.getElementById("nrOfTurns");
+    if (div) {
+        div.innerHTML = `Number of attempts:<span>${nrOfAttempts}</span>`;
+    }
+}
+
+function createFullSetOfCards() {
     const items = [];
 
     // Permutate all colors, fills and shapes
@@ -73,19 +95,30 @@ function setup() {
   setupBoard();
   manageBoard();
   setupHinting();
+  setupButtons();
+
+  showNrOfTurns();
+  showCardsLeftInFullSet();
+  showHintsUsed();
 }// setup
 
 function setupBoard() {
+    fullSetOfCards = createFullSetOfCards();
+    cardsOnTheBoard = [];
+
+    const cards = GetRandomItems(fullSetOfCards, 12);
+    addCards(cards);
+    showCardsLeftInFullSet();
+}// setupBoard
+
+function addCards(cards) {
     // get the container from the HTML
     const container = document.getElementById("shapes");
-
-    fullSetOfCards = GetFullSet();
-    randomCards = GetRandomItems(fullSetOfCards, 12);
-
-    for (const card of randomCards) {
+    for (const card of cards) {
+        cardsOnTheBoard.push(card);
         container.innerHTML += card.html;
     }
-}// setupBoard
+}
 
 function manageBoard() {
 
@@ -117,12 +150,22 @@ function handleClickEvent(evt) {
         const cardsNewSelected = document.querySelectorAll('div.card.selected');
 
         if (cardsNewSelected.length === 3 ) {
+            nrOfAttempts++;
+            showNrOfTurns();
             if (isSelectionASet()){
                 console.log('Een set gevonden!');
 
                 RemoveSelectedCards();
-                AddThreeNewCards();
+
+                // new amount of cards needs to 12; if there are more, do not add
+                const cardsToAdd = 12 - cardsOnTheBoard.length;
+
+                if (cardsToAdd > 0 ) {
+                    addNewRandomCards(cardsToAdd);
+                }
+
                 clearTableWithSelectionInfo();
+                clearHintsAsCards();
             }
         }
         else{
@@ -157,32 +200,39 @@ function isClickedElementACard(evt) {
     }
 }
 
+/**
+ * Remove the cards that are selected on the board. Also remove them from the internal administration
+ * @constructor
+ */
 function RemoveSelectedCards(){
     const cardsNewSelected = document.querySelectorAll('div.card.selected');
 
     // remove cards in the set
     for (const card of cardsNewSelected) {
+        const id = parseInt(card.id, 10);
         card.parentElement.removeChild(card);
+        const idx = cardsOnTheBoard.findIndex(c => c.id === id);
+        if (idx !== -1 ){
+            cardsOnTheBoard.splice(idx, 1);
+        }
     }
 }// RemoveSelectedCards
 
 /**
- * Find 3 new random items and add them to the DOM. The general CLICK-eventhandler on the parent (div.container)
- * can handle the clicks
+ * Find a number of new random items and add them to the DOM.
+ * The general CLICK-eventhandler on the parent (div.container) can handle the clicks
  * @constructor
  */
-function AddThreeNewCards() {
-    // pick 3 new cards
-    const container = document.getElementById("shapes");
-    const newCardsToPlace = GetRandomItems(fullSetOfCards, 3);
+function addNewRandomCards(nrOfNewCards) {
+    const cards = GetRandomItems(fullSetOfCards, nrOfNewCards);
+    addCards(cards);
+    showCardsLeftInFullSet();
+}// AddNewRandomCards
 
-    randomCards.push(...newCardsToPlace);
-
-    for (const card of newCardsToPlace) {
-        container.innerHTML += card.html;
-    }
-}// AddThreeNewCards
-
+/**
+ * Check if the selected cards on the board form a set.
+ * @returns {boolean|boolean}
+ */
 function isSelectionASet() {
     const selectedCardsGUI = document.querySelectorAll('div.card.selected');
     const cardsInfo = [];
@@ -190,7 +240,7 @@ function isSelectionASet() {
     // collect info on selected cards
     for (const card of selectedCardsGUI) {
         const id = parseInt(card.id, 10);
-        const cardInfo = randomCards.find(c => c.id === id);
+        const cardInfo = cardsOnTheBoard.find(c => c.id === id);
         if (cardInfo) {
             cardsInfo.push(cardInfo);
         }
@@ -304,10 +354,18 @@ function setupHinting() {
     const btn = document.getElementById("showHint");
     if (btn) {
         btn.addEventListener('click', function (evt) {
-           const setsFound = findAllSets(randomCards);
-           showHintsInTable(setsFound);
+           const setsFound = findAllSets(cardsOnTheBoard);
+            showHintsAsCards(setsFound);
+            hintsUsed++;
+            showHintsUsed();
         });
     }
+}
+
+function setupButtons() {
+    document.getElementById("addCard").addEventListener('click', function(evt) {
+        addNewRandomCards(1);
+    });
 }
 
 function showHintsInTable(hints) {
@@ -328,7 +386,37 @@ function showHintsInTable(hints) {
         i++;
 
     }
+}// showHintsInTable
+
+function clearHintsAsCards() {
+    const hintsShapeDiv = document.querySelector("#hintShapes");
+    hintsShapeDiv.innerHTML = '';
 }
+
+
+function showHintsAsCards(hints) {
+    clearHintsAsCards();
+    const hintsShapeDiv = document.querySelector("#hintShapes");
+    for(const hint of hints){
+        let hintCard = '';
+
+        for(const card of hint.sort((a,b) => a.nrOfShapes - b.nrOfShapes)){
+            let cardShapes = '';
+            for (let s = 0; s < card.nrOfShapes; s++) {
+                const oneShape = `<div>
+                    <svg viewBox="0 0 150 120" width="50px" height="40px">
+                        <use xlink:href="#svg_defs"></use>
+                        <use xlink:href="#card_${card.shape}" class="shape ${card.fill} ${card.color}"></use>
+                    </svg>
+                </div>`;
+                cardShapes += oneShape;
+            }
+
+            hintCard += `<div class="hintcard">${cardShapes}</div>`;
+        }
+        hintsShapeDiv.innerHTML += `<div class="oneHint">${hintCard}</div>` ;
+    }
+}// showHintsAsCards
 
 function findAllSet(cards, currentSet){
 
@@ -358,5 +446,5 @@ function findAllSet(cards, currentSet){
         }
     }
     return setsFound;
-}
+}// findAllSet
 

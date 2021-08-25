@@ -1,25 +1,42 @@
 body {
     box-sizing: border-box;
     background-color: indianred;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+div.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+div.left {
+    width: calc(100% - 300px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div.right {
+    width: 300px;
+    height: calc(100% - 10px);
+    overflow: auto;
+}
+
+
 #shapes {
-    /*
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 90vw;
     justify-content: flex-start;
     align-content: center;
-    */
-
-
     height: calc(100%);
-    max-width: calc(80%);
+    width: 1100px;
 }
 
 #shapes div.card {
-    float:left;
     cursor: pointer;
     box-shadow: 4px 4px 4px darkgray;
 }
@@ -54,4 +71,49 @@ body {
 div.card svg {
     height: 100px;
     width: 140px;
+}
+
+#hintShapes {
+    height: 580px;
+    overflow: auto;
+}
+
+#hintShapes div.oneHint {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border:1px solid black;
+    border-radius: 5px 5px 5px 5px;
+    background-color: transparent;
+    margin:5px;
+}
+
+div.oneHint div.hintcard {
+    background-color: whitesmoke;
+    border-radius: 4px 4px 4px 4px;
+    width: 80px;
+    height: 140px;
+    margin:5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table.selectionInfo td {
+    width: 30px;
+    text-align: center;
+}
+
+div.guicard {
+    background-color:white;
+    border: 1px solid darkgrey;
+    border-radius: 4px 4px 4px 4px;
+    padding: 4px;
+    margin: 5px;
+}
+
+div.guicard h1 {
+    font-size: 12pt;
+    text-align: center;
 }

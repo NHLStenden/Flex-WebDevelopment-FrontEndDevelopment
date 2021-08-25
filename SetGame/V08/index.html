@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Set Game - Versie 7</title>
+    <title>Set Game - Versie 8</title>
     <script src="js/index.js" type="module"></script>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/svg-colors.css">
@@ -40,55 +40,59 @@
     </defs>
 </svg>
 <div class="container">
-    <div id="shapes"></div>
-    <div class="selectionInfo">
-        <table>
-            <thead>
-              <th>Item</th>
-              <th>Diff</th>
-              <th>Same</th>
-            </thead>
-            <tbody>
-            <tr class="fills">
-                <td>Fills:</td>
-                <td class="indicator"></td>
-                <td class="indicator"></td>
-            </tr>
-            <tr class="colors">
-                <td>Colors:</td>
-                <td class="indicator"></td>
-                <td class="indicator"></td>
-            </tr>
-            <tr class="shapes">
-                <td>Shapes:</td>
-                <td class="indicator"></td>
-                <td class="indicator"></td>
-            </tr>
-            <tr class="nrOfshapes">
-                <td># shapes</td>
-                <td class="indicator"></td>
-                <td class="indicator"></td>
-            </tr>
-            </tbody>
-            <tfoot>
-
-            </tfoot>
-        </table>
+    <div class="left">
+        <div id="shapes"></div>
     </div>
-    <button id="showHint">Hint!</button>
-    <table id="hints">
-        <thead>
-        <th>#</th>
-        <th>Shape</th>
-        <th>Color</th>
-        <th>Fill</th>
-        <th>Nr of shapes</th>
-        </thead>
-        <tbody>
 
-        </tbody>
-    </table>
+    <div class="right">
+        <div class="stats guicard">
+            <h1>Statistics</h1>
+            <div id="cardsleft"></div>
+            <div id="hintsused"></div>
+            <div id="nrOfTurns"></div>
+        </div>
+        <div class="selectionInfo guicard">
+            <table>
+                <thead>
+                <th>Item</th>
+                <th>Diff</th>
+                <th>Same</th>
+                </thead>
+                <tbody>
+                <tr class="fills">
+                    <td>Fills:</td>
+                    <td class="indicator"></td>
+                    <td class="indicator"></td>
+                </tr>
+                <tr class="colors">
+                    <td>Colors:</td>
+                    <td class="indicator"></td>
+                    <td class="indicator"></td>
+                </tr>
+                <tr class="shapes">
+                    <td>Shapes:</td>
+                    <td class="indicator"></td>
+                    <td class="indicator"></td>
+                </tr>
+                <tr class="nrOfshapes">
+                    <td># shapes</td>
+                    <td class="indicator"></td>
+                    <td class="indicator"></td>
+                </tr>
+                </tbody>
+                <tfoot>
 
+                </tfoot>
+            </table>
+        </div>
+        <button id="showHint">Hint!</button>
+        <button id="addCard">Add Card</button>
+        <div class="guicard">
+            <h1>Hints</h1>
+            <div id="hintShapes"></div>
+        </div>
+
+    </div>
 </div>
 </body>
 </html>
