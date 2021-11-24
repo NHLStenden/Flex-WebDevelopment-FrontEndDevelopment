@@ -3,7 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
 
 class Parkeerlocaties {
-  public parkeerlocaties:any;
+  public parkeerlocaties: any;
 }
 
 
@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
 
     observable.subscribe(
       data => {
+        console.log('x');
         this.parkeerlocaties = data.parkeerlocaties;
       },
       error => console.log('error!', error)
