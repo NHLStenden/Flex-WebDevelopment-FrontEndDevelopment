@@ -1,0 +1,5 @@
+<ol *ngIf="parkeerlocaties">
+  <li *ngFor="let locatie of parkeerlocaties.parkeerlocaties"
+      (click)="showInfo(locatie.parkeerlocatie.adres);"
+  >{{locatie.parkeerlocatie.title}}</li>
+</ol>
