@@ -4,4 +4,9 @@ export class CoverArtArchiveResponse {
   images: CoverArtArchiveImage[];
   release: string;
 
+
+  constructor() {
+    this.images = [];
+    this.release = '';
+  }
 }

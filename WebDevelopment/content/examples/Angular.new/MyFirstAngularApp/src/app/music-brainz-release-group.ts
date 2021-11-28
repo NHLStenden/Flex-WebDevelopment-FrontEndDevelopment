@@ -3,4 +3,12 @@ export class MusicBrainzReleaseGroup {
   'primary-type': string;
   'type-id': string;
   title: string;
+
+
+  constructor() {
+    this.title = '';
+    this["type-id"] = '';
+    this["primary-type"] = '';
+    this.id = '';
+  }
 }

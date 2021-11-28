@@ -16,10 +16,10 @@ export class FietsInfoService {
   }
 
   getFietsInfo(): Observable<Array<ParkeerLocatie>> {
-    return this.http.get<Array<ParkeerLocatie>>(this.URL).pipe(
+    return this.http.get(this.URL).pipe(
       map((response: any) => {
           console.log(response);
-          const locaties = response.parkeerlocaties.map(locatie => new ParkeerLocatie(locatie.parkeerlocatie));
+          const locaties = response.parkeerlocaties.map(loc => new ParkeerLocatie(loc.parkeerlocatie) );
           return locaties;
         }
       ) // map

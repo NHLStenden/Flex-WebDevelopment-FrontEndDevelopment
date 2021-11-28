@@ -22,4 +22,22 @@ export class MusicBrainzRelease {
   packaging: string;
   coverArtData: CoverArtArchiveImage[];
   coverArtImages: CovertArtImageInfo[];
+
+
+  constructor() {
+    this.id = '';
+    this.count = 0;
+    this.country = '';
+    this.score = 0;
+    this.status = '';
+    this.title = '';
+    this.media = [];
+    this["release-events"] = new MusicBrainzReleaseEvent();
+    this["release-group"] = new MusicBrainzReleaseGroup();
+    this.packaging = '';
+    this.coverArtData = [];
+    this.coverArtImages = [];
+    this.date = '';
+    this.title = '';
+  }
 }

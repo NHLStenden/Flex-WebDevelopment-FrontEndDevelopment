@@ -6,4 +6,10 @@ export class MusicBrainzReleaseEvent {
     'sort-name': string;
   }[];
   date : string;
+
+  constructor() {
+    this.area = [];
+    this.date = '';
+
+  }
 }

@@ -1,6 +1,5 @@
 import {Component, Input, NgZone, OnInit} from '@angular/core';
 import {FietsInfoService} from '../../services/fiets-info.service';
-import {MyOsmMap} from '../../classes/my-osm-map';
 import {icon, latLng, marker, tileLayer} from "leaflet";
 import 'leaflet.markercluster';
 import {ParkeerLocatie} from "../../classes/parkeer-locatie";
@@ -17,11 +16,13 @@ export class OsmFietsKaartComponent implements OnInit {
   public options: any;
   public baselayers: any;
   markerClusterData: L.Marker[] = [];
-  markerClusterOptions: L.MarkerClusterGroupOptions;
+  markerClusterOptions: L.MarkerClusterGroupOptions ;
   public selectedLocatie: ParkeerLocatie;
 
   constructor(private fietsInfoService: FietsInfoService,
               private zone: NgZone) {
+    this.markerClusterOptions;
+    this.selectedLocatie = undefined;
   }
 
   ngOnInit() {

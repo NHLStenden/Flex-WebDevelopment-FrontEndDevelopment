@@ -1,9 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {MusicBrainzRelease} from '../../classes/music-brainz-release';
-import {map} from 'rxjs/operators';
-import {CoverArtArchiveService} from '../../services/cover-art-archive.service';
-import {Observable} from 'rxjs';
-import {CoverArtArchiveImage} from '../../classes/cover-art-archive-image';
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-release-list',
@@ -14,7 +11,11 @@ export class ReleaseListComponent implements OnInit {
 
   @Input() releases$: Observable<MusicBrainzRelease[]>;
   selectedRelease: MusicBrainzRelease;
-  constructor() { }
+
+  constructor() {
+    this.selectedRelease = new MusicBrainzRelease();
+    this.releases$ = new Observable<MusicBrainzRelease[]>();
+  }
 
   ngOnInit() {
   }

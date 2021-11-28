@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {CoverArtArchiveImage} from '../../classes/cover-art-archive-image';
-import {Observable} from 'rxjs';
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-image-list',
@@ -12,7 +12,9 @@ export class ImageListComponent implements OnInit {
   @Input() images$: Observable<CoverArtArchiveImage[]>;
   @Output() onSelectImage: EventEmitter<CoverArtArchiveImage> = new EventEmitter<CoverArtArchiveImage>();
 
-  constructor() { }
+  constructor() {
+    this.images$ = new Observable<CoverArtArchiveImage[]>();
+  }
 
   ngOnInit() {
   }

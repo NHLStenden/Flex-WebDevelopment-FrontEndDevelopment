@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
 import {CoverArtArchiveResponse} from '../classes/cover-art-archive-response';
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'

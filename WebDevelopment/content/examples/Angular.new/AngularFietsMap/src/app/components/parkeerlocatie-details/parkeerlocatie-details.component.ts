@@ -8,10 +8,11 @@ import {ParkeerLocatie} from '../../classes/parkeer-locatie';
 })
 export class ParkeerlocatieDetailsComponent implements OnInit, OnChanges, OnDestroy, AfterViewInit {
 
-  @Input() parkeerlocatie: ParkeerLocatie;
+  @Input() parkeerlocatie: ParkeerLocatie | undefined;
 
   constructor() {
     console.log('ParkeerlocatieDetailsComponent::constructor');
+    this.parkeerlocatie = undefined;
 
     let x = [1, 2, 3, 4];
     x.push(5); // geen change detection

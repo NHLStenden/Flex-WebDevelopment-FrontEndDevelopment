@@ -27,6 +27,13 @@ export class AppComponent {
 
   constructor(private musicBrainzService: MusicBrainzService,
               private coverArtArchiveService: CoverArtArchiveService) {
+    this.band = '';
+    this.releaseInfo$ = new Observable<MusicBrainzResponse>();
+    this.selectedImage = new CoverArtArchiveImage();
+    this.images$ = new Observable<CoverArtArchiveImage[]>();
+    this.selectedImage = new CoverArtArchiveImage();
+    this.selectedRelease = new MusicBrainzRelease();
+    this.releases$ = new Observable<MusicBrainzRelease[]>();
   }
 
   searchBand(event: MouseEvent) {

@@ -9,7 +9,9 @@ import {CoverArtArchiveImage} from '../../classes/cover-art-archive-image';
 export class ImageDetailsComponent implements OnInit {
   @Input() image: CoverArtArchiveImage;
 
-  constructor() { }
+  constructor() {
+    this.image = new CoverArtArchiveImage();
+  }
 
   ngOnInit() {
   }
