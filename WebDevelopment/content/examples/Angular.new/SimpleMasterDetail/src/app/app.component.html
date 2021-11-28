@@ -1,0 +1,15 @@
+<div>
+  <h1>Dit is de hoofdcomponent</h1>
+    <div *ngFor="let item of items$ | async">
+      <!-- DONE:: set select-class on new selected item -->
+      <p class="person"
+         [class.selected]="item === (selectedItem$ | async)"
+         (click)="selectItem(item)">
+        {{item.naam}} ({{item.leeftijd}})
+      </p>
+    </div>
+    <div>
+      Geselecteerd: {{(selectedItem$ | async)?.achternaam}} | {{(selectedItem$ | async)?.leeftijd}}
+    </div>
+    <app-details></app-details>
+</div>

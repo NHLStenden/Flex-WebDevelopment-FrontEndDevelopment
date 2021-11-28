@@ -1,0 +1,10 @@
+#osmmap {
+  width:600px;
+  height:600px;
+}
+
+app-parkeerlocatie-details {
+  position: absolute;
+  top: 0px;
+  left:620px;
+}

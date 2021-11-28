@@ -1,0 +1,7 @@
+p.person {
+  cursor:pointer;
+}
+
+p.person.selected {
+  background-color:lightgray;
+}

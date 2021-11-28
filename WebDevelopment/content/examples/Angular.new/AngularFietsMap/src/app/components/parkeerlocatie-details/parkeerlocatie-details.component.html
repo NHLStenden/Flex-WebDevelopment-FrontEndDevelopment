@@ -1,0 +1,15 @@
+<div >
+  <h3>Detail informatie</h3>
+  <table *ngIf="parkeerlocatie">
+    <thead></thead>
+    <tbody *ngIf="parkeerlocatie">
+    <tr><td class="label">Naam</td><td class="value">{{parkeerlocatie.title}}</td></tr>
+    <tr><td class="label">Adres</td><td class="value">{{parkeerlocatie.adres}}</td></tr>
+    <tr><td class="label">Postcode</td><td class="value">{{parkeerlocatie.postcode}}</td></tr>
+    <tr><td class="label">Type</td><td class="value">{{parkeerlocatie.type}}</td></tr>
+    <tr><td class="label">Plaats</td><td class="value">{{parkeerlocatie.woonplaats}}</td></tr>
+    <tr><td class="label">Opmerkingen</td><td class="value">{{parkeerlocatie.opmerkingen}}</td></tr>
+    <tr><td class="label">URL</td><td class="value"><a href="{{parkeerlocatie.url}}">URL</a></td></tr>
+    </tbody>
+  </table>
+</div>
