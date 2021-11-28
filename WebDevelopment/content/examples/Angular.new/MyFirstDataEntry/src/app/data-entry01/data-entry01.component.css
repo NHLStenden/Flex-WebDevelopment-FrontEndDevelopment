@@ -1,0 +1,14 @@
+.dataentrycontainer {
+  width:600px;
+}
+
+.dataentrycontainer form {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.buttonbar {
+  display: flex;
+  justify-content: space-around;
+}

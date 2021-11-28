@@ -8,10 +8,13 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatInputModule} from "@angular/material/input";
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatButtonModule} from "@angular/material/button";
+import {DataEntry01Component} from "./data-entry01/data-entry01.component";
+import {DataEntry02Component} from "./data-entry02/data-entry02.component";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,  DataEntry01Component, DataEntry02Component
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,8 @@ import {MatButtonModule} from "@angular/material/button";
     MatButtonModule,
     ReactiveFormsModule,
     FormsModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

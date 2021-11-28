@@ -1,0 +1,44 @@
+<div class="dataentrycontainer">
+  <form>
+    <mat-form-field>
+      <mat-label>Voornaam</mat-label>
+      <input matInput placeholder="Voornaam" type="text">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Achternaam</mat-label>
+      <input matInput placeholder="Achternaam" required type="text">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Username</mat-label>
+      <input matInput placeholder="Username" required type="text">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>e-mail address</mat-label>
+      <input matInput placeholder="Username" type="email" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="Password" type="password" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Gender</mat-label>
+      <mat-select placeholder="Select">
+        <mat-option value="M">Male</mat-option>
+        <mat-option value="F">Female</mat-option>
+        <mat-option value="X">I do not want to reveal</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea matInput placeholder="Textarea"></textarea>
+    </mat-form-field>
+
+    <div class="buttonbar">
+      <button mat-button type="submit">Opslaan</button>
+      <button mat-button type="reset">Opnieuw</button>
+    </div>
+  </form>
+
+</div>
