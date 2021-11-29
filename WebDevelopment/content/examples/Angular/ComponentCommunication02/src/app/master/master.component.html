@@ -1,0 +1,14 @@
+<form (submit)="onSubmit($event)">
+   <label>
+     Jouw naam (master)
+     <input name="naam" type="text" [(ngModel)]="store.naam"/>
+     <!-- Let op: om [(ngModel)] te gebruiken moet je in het bestand app.module.ts opnemen dat je de module
+     'FormsModule' importeert (zie sectie [imports])
+     https://angular.io/api/forms/NgModel
+     -->
+   </label>
+  <button type="submit"> Opslaan</button>
+</form>
+
+<hr>
+
