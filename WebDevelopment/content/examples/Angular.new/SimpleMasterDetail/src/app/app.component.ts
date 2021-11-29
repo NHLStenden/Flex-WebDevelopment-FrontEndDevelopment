@@ -15,6 +15,8 @@ export class AppComponent implements  OnInit {
   public selectedItem$: Observable<Person>;
 
   constructor(private store: MasterDetailService) {
+    this.items$ = new Observable<Person[]>();
+    this.selectedItem$ = new Observable<Person>();
   }
 
   ngOnInit(): void {

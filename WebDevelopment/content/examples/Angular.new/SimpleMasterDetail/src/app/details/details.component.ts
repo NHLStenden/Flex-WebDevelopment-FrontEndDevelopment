@@ -12,14 +12,17 @@ export class DetailsComponent implements OnInit {
 
   /* @Input() selectedItem: Person; */
   public selectedItem$: Observable<Person>;
-  public selectedItem: Person;
+  public selectedItem: Person | undefined;
 
-  constructor(private store: MasterDetailService) { }
+  constructor(private store: MasterDetailService) {
+    this.selectedItem$ = new Observable<Person>( );
+    this.selectedItem = undefined;
+  }
 
   ngOnInit(): void {
-	// we luiisteren naar de observable in de STORE voor het HTML-sjabloon	  
+	// we luisteren naar de observable in de STORE voor het HTML-sjabloon
     this.selectedItem$ = this.store.selectedItem$;
-	
+
 	// we luisteren naar de observable in STORE om een verwijzing te krijgen naar het geselecteerde object
 	// ZODAT: we in de ageUp() en ageDown() functie kunnen meegeven welk object (Person) we willen veranderen
     this.selectedItem$.subscribe(newSelectedItem => this.selectedItem = newSelectedItem);
@@ -28,10 +31,15 @@ export class DetailsComponent implements OnInit {
   public ageUp(): void {
 	// dit component weet dus niet wat er voor nodig is om de leeftijd te verhogen, of hoe dat werkt.
 	// door te luisteren naar de observable in de store, krijgen we uiteindelijk de nieuwe informatie weer terug.
-    this.store.increaseAge(this.selectedItem);
+    if (this.selectedItem ) {
+      this.store.increaseAge(this.selectedItem);
+    }
+
   }
 
   public ageDown(): void {
-    this.store.decreaseAge(this.selectedItem);
+    if (this.selectedItem) {
+      this.store.decreaseAge(this.selectedItem);
+    }
   }
 }

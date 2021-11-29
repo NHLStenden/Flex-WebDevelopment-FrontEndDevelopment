@@ -1,8 +1,8 @@
 <div *ngIf="selectedItem$ | async">
-  <p>{{(selectedItem$ | async).naam}} {{(selectedItem$  | async).achternaam}} =
-    {{(selectedItem$ | async).leeftijd}}
+  <p>{{(selectedItem$ | async)?.naam}} {{(selectedItem$  | async)?.achternaam}} =
+    {{(selectedItem$ | async)?.leeftijd}}
     <button (click)="ageUp()">Up</button>
     <button (click)="ageDown()">Down</button>
   </p>
-  <P>Status: {{(selectedItem$ | async).status}}</P>
+  <P>Status: {{(selectedItem$ | async)?.status}}</P>
 </div>

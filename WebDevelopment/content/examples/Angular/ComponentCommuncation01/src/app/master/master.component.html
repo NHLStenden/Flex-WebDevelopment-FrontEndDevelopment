@@ -1,0 +1,9 @@
+<form>
+   <label>
+     Jouw naam
+     <input name="naam" type="text" [(ngModel)]="naam"/>
+   </label>
+</form>
+
+<hr>
+<app-detail [data]="naam" (selectedSomething)="childHasChanged($event)"></app-detail>
