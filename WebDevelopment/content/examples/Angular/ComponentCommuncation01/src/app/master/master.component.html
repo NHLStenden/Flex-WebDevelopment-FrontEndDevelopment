@@ -2,8 +2,13 @@
    <label>
      Jouw naam
      <input name="naam" type="text" [(ngModel)]="naam"/>
+     <!-- Let op: om [(ngModel)] te gebruiken moet je in het bestand app.module.ts opnemen dat je de module
+     'FormsModule' importeert (zie sectie [imports])
+     https://angular.io/api/forms/NgModel
+     -->
    </label>
 </form>
 
 <hr>
-<app-detail [data]="naam" (selectedSomething)="childHasChanged($event)"></app-detail>
+<app-detail [invoervariabele]="naam" (dataHasChanged)="childHasChanged($event)"></app-detail>
+<app-detail invoervariabele="vaste tekst die niet mee verandert" (dataHasChanged)="childHasChanged($event)"></app-detail>

@@ -8,11 +8,11 @@ import { EventEmitter } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  @Input() data: string;
-  @Output() selectedSomething = new EventEmitter<string>();
+  @Input() invoervariabele: string;
+  @Output() dataHasChanged = new EventEmitter<string>();
 
   constructor() {
-    this.data = '';
+    this.invoervariabele = '';
   }
 
   ngOnInit(): void {
@@ -20,7 +20,7 @@ export class DetailComponent implements OnInit {
 
   public onSubmit(): void {
     console.log("Submit!");
-    this.selectedSomething.emit(this.data);
+    this.dataHasChanged.emit(this.invoervariabele);
   }
 
 }
