@@ -1,5 +1,7 @@
 import {Component, Input, OnInit, Output} from '@angular/core';
 import { EventEmitter } from '@angular/core';
+import {StoreService} from "../services/store.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-detail',
@@ -8,19 +10,21 @@ import { EventEmitter } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  @Input() invoervariabele: string;
-  @Output() dataHasChanged = new EventEmitter<string>();
+  public naam : string;
 
-  constructor() {
-    this.invoervariabele = '';
+  constructor(private store: StoreService) {
+    this.naam = '';
+    this.store.naam$.subscribe( data => {
+      this.naam = data;
+    });
   }
 
   ngOnInit(): void {
+
   }
 
   public onSubmit(): void {
     console.log("Submit!");
-    this.dataHasChanged.emit(this.invoervariabele);
   }
 
 }

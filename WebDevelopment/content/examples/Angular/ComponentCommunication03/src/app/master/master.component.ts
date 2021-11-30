@@ -1,4 +1,5 @@
 import {Component, OnInit, Output} from '@angular/core';
+import {StoreService} from "../services/store.service";
 
 @Component({
   selector: 'app-master',
@@ -7,16 +8,18 @@ import {Component, OnInit, Output} from '@angular/core';
 })
 export class MasterComponent implements OnInit {
 
-  public naam = ""; // implicit declaration of type string.
+  public naam: string;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private store: StoreService) {
+    this.naam = '??';
   }
 
-  public childHasChanged(newdata: string): void {
-    console.log(newdata);
-    this.naam = newdata;
+  ngOnInit(): void {
+
+  }
+
+  public onSubmit(event: any) {
+    this.store.update(this.naam);
   }
 
 }

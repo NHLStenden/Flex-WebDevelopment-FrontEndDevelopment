@@ -1,4 +1,4 @@
-<form>
+<form (submit)="onSubmit($event)">
    <label>
      Jouw naam
      <input name="naam" type="text" [(ngModel)]="naam"/>
@@ -7,8 +7,5 @@
      https://angular.io/api/forms/NgModel
      -->
    </label>
+  <button type="submit">Opslaan</button>
 </form>
-
-<hr>
-<app-detail [invoervariabele]="naam" (dataHasChanged)="childHasChanged($event)"></app-detail>
-<app-detail invoervariabele="vaste tekst die niet mee verandert" (dataHasChanged)="childHasChanged($event)"></app-detail>
