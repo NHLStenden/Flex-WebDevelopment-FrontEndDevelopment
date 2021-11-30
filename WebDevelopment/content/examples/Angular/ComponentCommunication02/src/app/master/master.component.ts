@@ -8,8 +8,6 @@ import {StoreService} from "../services/store.service";
 })
 export class MasterComponent implements OnInit {
 
-  public naam = ""; // implicit declaration of type string.
-
   /**
    * Gebruik "Dependency injection" om een store te injecteren. Angular zorgt voor de juiste initialisatie.
    * @param store
@@ -19,8 +17,4 @@ export class MasterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(event: any) {
-    console.log(event);
-    this.store.updateValue(this.naam);
-  }
 }

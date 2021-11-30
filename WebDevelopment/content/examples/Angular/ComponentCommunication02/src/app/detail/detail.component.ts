@@ -18,9 +18,4 @@ export class DetailComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  public onSubmit(): void {
-    console.log("Submit!");
-  }
-
 }
