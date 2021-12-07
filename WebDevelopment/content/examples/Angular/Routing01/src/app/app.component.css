@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+div.container {
+  height: 95vh;
+  border:none;
+
+}
+.content {
+  height: calc(100% - 60px - 60px);
+  margin:0px;
+  padding:0px;
+  overflow: auto;
+}
+header {
+   height:60px;
+}
+
+header a,
+footer a {
+  color: white;
+}
+
+header a  {
+  margin-right: 10px;
+  box-shadow: 4px 4px 4px black;
+  padding:5px;
+}
+
+footer {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header, footer {
+  background-color: darkgray;
+  color:white;
+  margin:0px;
+  border:none;
+}
