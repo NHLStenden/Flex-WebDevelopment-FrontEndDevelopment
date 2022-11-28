@@ -1,0 +1,11 @@
+<fieldset>
+  <legend>Persoonsgegevens</legend>
+
+  <P>Mijn geboortedatum is {{mijnGeboortedatum | date:"short"}}</P>
+
+  <app-leeftijd [geboortedatum]="mijnGeboortedatum" (klaar)="erIsTheeKlaar($event)"></app-leeftijd>
+
+  <hr>
+
+  <p>Bericht: {{theebericht}}</p>
+</fieldset>
