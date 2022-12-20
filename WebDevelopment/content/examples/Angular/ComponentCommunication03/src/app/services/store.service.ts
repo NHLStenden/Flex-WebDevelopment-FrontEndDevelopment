@@ -10,9 +10,13 @@ export class StoreService {
   public naam$: Observable<string>;   // https://rxjs.dev/guide/observable
 
   constructor() {
-    this.naam = '';
+    this.naam = 'constructor waarde van de store';
    this.stringSubject = new Subject<string>();
    this.naam$ = this.stringSubject.asObservable();
+  }
+
+  initialiseerWaarden(): void {
+    this.update("nog niet ingevuld");
   }
 
   public update(newnaam: string) : void {

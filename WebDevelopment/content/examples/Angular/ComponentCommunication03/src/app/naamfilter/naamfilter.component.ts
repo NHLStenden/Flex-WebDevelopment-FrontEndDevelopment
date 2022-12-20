@@ -9,18 +9,26 @@ import {filter, map} from "rxjs";
 })
 export class NaamfilterComponent implements OnInit {
 
-  public naam: string;
+  public herhaaldeNaam: string;
+  public gewoneNaam: string;
 
   constructor(private store: StoreService) {
-    this.naam = '????';
+    this.herhaaldeNaam = '????';
+    this.gewoneNaam = '????';
+
+    this.store.naam$.subscribe(nieuwenaam => this.gewoneNaam = nieuwenaam)
 
     this.store.naam$.pipe(
-      filter( waarde => waarde === 'martin'),
-      map(waarde => waarde.repeat(3))
-    ).subscribe(x => {
-      this.naam = x;
+      filter( nieuwenaam => nieuwenaam === 'martin'),
+      map(naamIsMartin => naamIsMartin.repeat(3))
+    ).subscribe(herhaaldenaamUitPijplijn => {
+      this.herhaaldeNaam = herhaaldenaamUitPijplijn;
     });
   }
+
+
+
+
 
   ngOnInit(): void {
   }

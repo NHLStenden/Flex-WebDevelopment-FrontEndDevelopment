@@ -11,11 +11,11 @@ export class MasterComponent implements OnInit {
   public naam: string;
 
   constructor(private store: StoreService) {
-    this.naam = '??';
+    this.naam = 'dit is de waarde van de master component';
   }
 
   ngOnInit(): void {
-
+    this.store.initialiseerWaarden();
   }
 
   public onSubmit(event: any) {
