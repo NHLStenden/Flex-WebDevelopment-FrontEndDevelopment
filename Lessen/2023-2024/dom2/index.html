@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p {
+            font-family: sans-serif;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var mijnlijstElement = document.getElementById("list");
+            var lijst = [
+                'A', 'B', 'C'
+            ];
+            lijst.forEach(item => {
+                console.warn(item);
+                var el = document.createElement("li");
+                el.textContent = item;
+                mijnlijstElement.appendChild(el);
+            });
+
+        }
+    </script>
+</head>
+<body>
+<div id="mytext">
+    <p>een lege div</p>
+    <p>
+        <span>a</span>
+        <span>b</span>
+        <span>c</span>
+    </p>
+</div>
+<div class="container">
+    <ul id="list">
+
+    </ul>
+</div>
+
+</body>
+</html>
