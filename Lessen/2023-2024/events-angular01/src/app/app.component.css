@@ -1,0 +1,7 @@
+.clicked {
+ display: none;
+}
+
+article.articleIsOpen P {
+  display: none;
+}

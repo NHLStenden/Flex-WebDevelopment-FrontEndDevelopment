@@ -1,0 +1,8 @@
+<ul *ngIf="lijst !== undefined">
+  <li *ngFor="let item of lijst">{{item.address}}</li>
+</ul>
+<P>versie 2 asynchroon</P>
+<ul *ngIf="lijst !== undefined">
+  <li *ngFor="let item of lijstAsync$ | async">{{item.address}}</li>
+</ul>
+<p *ngIf="lijst === undefined">wachten</p>

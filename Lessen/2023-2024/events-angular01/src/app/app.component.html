@@ -1,0 +1,36 @@
+<app-article-list
+  [itemList]="items"
+  (itemWasClicked)="clickHandler($event)"
+></app-article-list>
+
+
+
+<article (click)="openCloseArticle()" [class.articleIsOpen]="isOpen">
+  <header>
+    <h1>artikel 1</h1>
+  </header>
+  <p *ngFor="let item of items"
+     (click)="clickHandler(item)"
+     [class.clicked]="item.wasClicked"
+  >{{item.naam}}</p>
+</article>
+<article>
+  <header>
+    <h1>artikel 2</h1>
+  </header>
+  <p>8</p>
+  <p>9</p>
+  <p>8</p>
+  <p>7</p>
+  <p>6</p>
+</article>
+<article>
+  <header>
+    <h1>artikel 3</h1>
+  </header>
+  <p>5</p>
+  <p>6</p>
+  <p>7</p>
+  <p>8</p>
+  <p>9</p>
+</article>
