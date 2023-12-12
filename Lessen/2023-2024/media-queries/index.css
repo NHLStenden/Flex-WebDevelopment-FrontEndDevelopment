@@ -48,7 +48,6 @@ div.list .list-item:hover {
     cursor: pointer;
 }
 
-
 @media (max-width: 600px ) {
     div.list {
         background: aqua;
@@ -69,8 +68,7 @@ div.list .list-item:hover {
     }
 
     nav {
-        display: flex;
-        flex-direction: column;
+        display: none;
         height: 100vh;
         position: absolute;
         top: 80px;
@@ -82,6 +80,7 @@ div.list .list-item:hover {
         justify-content: flex-start;
         align-items: center;
     }
+
 }
 
 @media print {
