@@ -1,0 +1,21 @@
+<ul>
+  @for (item of items; track items){
+    <li>{{item}}</li>
+  }
+</ul>
+
+<h1>Stallingen</h1>
+@if (stallingen !== undefined) {
+  <ul>
+    <!-- gebruik de nieuwe @for-lus constructie. om te detecteren of een item verandert kijken we naar het adres van een item
+         deze `track` eigenschap is verplicht om te zorgen dat Angular écht snapt wat een verandering is.
+    -->
+    @for  (stalling of stallingen.parkeerlocaties; track stalling.parkeerlocatie.adres) {
+      <li>{{ stalling.parkeerlocatie.adres }}</li>
+    } @empty {
+      <span>Resultaat set is nog leeg</span>
+    }
+  </ul>
+} @else {
+  <h2>Wachten op http-resultaten</h2>
+}
